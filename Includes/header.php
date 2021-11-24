@@ -42,7 +42,7 @@
                         <a href="#" class="nav-link">Offers</a>
                     </li>
                     <li>
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="contact.php" class="nav-link">Contact</a>
                     </li>
                     <li>
                         <a href="#" class="nav-link">FAQs</a>
