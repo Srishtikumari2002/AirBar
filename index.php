@@ -141,7 +141,7 @@
     </div>
     </form>
 
-    <main style="height: 50vh;"></main>
+    <main style="height: 100vh;"></main>
 
     <?php include("Includes/footer.php"); ?>
 

@@ -39,7 +39,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 2px solid rgba(255,255,255,.05); /*comment to remove the botttom bar*/
+    border-bottom: 2px solid rgba(255, 255, 255, 0); /*comment to remove the botttom bar*/
     transition: height .5s ease;
     outline: none;
 }
