@@ -1,5 +1,12 @@
+/* Google Font CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 body {
-    background: #004bade1;
+    min-height: 100vh;
+    width: 100%;
+    background:#004bade1;
+    align-items: center;
+    justify-content: center;
 }
 
 .header-bg {
@@ -8,17 +15,97 @@ body {
     height: 6.6rem;
 }
 
-.user-details-area {
-    text-align:center;
-    width: 100%;
-    padding: 20px;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
 }
 
-.user-details-area .user-details{
-    margin: 0 auto;
+.profile-container{
+  width: 85%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 5rem auto;
+}
+.profile-container a {
+  text-decoration: none;
+}
+.profile-container .profile-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.profile-container .profile-content .profile-left-side{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+.profile-content .profile-left-side::before{
+  content: '';
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #afafb6;
 }
 
-.user-details h1 {
-    color: white;
-    font-size: 3.6rem;
+.profile-container .profile-content .profile-right-side{
+  width: 75%;
+  margin-left: 75px;
+}
+.profile-content .profile-left-side .profile-topic-text{
+  font-size: 30px;
+  font-weight: 600;
+  color: #424242;
+}
+.profile-right-side .profile-input-box{
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+.profile-right-side .profile-input-box input,
+.profile-right-side .profile-input-box textarea{
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+.profile-right-side .profile-message-box{
+  min-height: 110px;
+}
+.profile-right-side .profile-input-box textarea{
+  padding-top: 6px;
+}
+.profile-right-side .profile-button{
+  display: inline-block;
+  margin-top: 12px;
+}
+.profile-right-side .profile-button input[type="button"]{
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #3e2093;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.profile-button input[type="button"]:hover{
+  background: #5029bc;
 }

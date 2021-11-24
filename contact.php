@@ -62,14 +62,14 @@
 
                 <p>If you have any type of query or suggestion related to our services, you can send us message from here. It's our pleasure to help you.</p>
                 
-                <form action="#">
+                <form action="#" method="POST">
 
                     <div class="input-box">
                         <input type="text" placeholder="Enter your name">
                     </div>
 
                     <div class="input-box">
-                        <input type="text" placeholder="Enter your email">
+                        <input type="email" placeholder="Enter your email">
                     </div>
 
                     <div class="input-box message-box">

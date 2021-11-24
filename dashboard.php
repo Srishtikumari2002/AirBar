@@ -25,16 +25,63 @@
 
 <body>
 
+    <?php session_start(); ?>
     <?php include("Includes/header.php"); ?>
     <div class="header-bg"></div>
 
-    <div class="user-details-area">
-        <div class="user-details">
-            <h1>My Profile</h1>
+    <div class="profile-container">
+
+        <div class="profile-content">
+
+            <div class="profile-left-side">
+
+                <div class="profile-topic-text">My Profile</div><br>
+                <div class="profile-topic-text"><i class="fas fa-user-tie fa-7x"></i></div>
+
+
+                <!-- <div class="phone details">
+
+                    <i class="fas fa-phone-alt"></i>
+                    <div class="topic">Phone</div>
+                    <a href="tel:+919310519210" class="text-one">+91 9310519210</a><br>
+                    <a href="tel:+918076654886" class="text-two">+91 8076654886</a><br>
+                    <a href="tel:+918766393891" class="text-one">+91 8766393891</a>
+
+                </div>
+
+                <div class="email details">
+
+                    <i class="fas fa-envelope"></i>
+                    <div class="topic">Email</div>
+                    <a href="mailto:simran033btcsai20@gmail.com" class="text-one">simran033btcsai20@gmail.com</a>
+                    <a href="mailto:simran065btcsai20@igdtuw.ac.in" class="text-two">simran065btcsai20@igdtuw.ac.in</a>
+                    <a href="mailto:srishti060btcsai20@igdtuw.ac.in" class="text-two">srishti060btcsai20@igdtuw.ac.in</a>
+                </div> -->
+
+            </div>
+
+            <div class="profile-right-side">
+
+                <form action="#" method="POST">
+
+                    <div class="profile-input-box">
+                        <input type="text" placeholder="Enter your name" value="<?php echo $_SESSION['name']; ?>">
+                    </div>
+
+                    <div class="profile-input-box">
+                        <input type="email" placeholder="Enter your email" value="<?php echo $_SESSION['email']; ?>">
+                    </div>
+
+                    <div class="profile-button">
+                        <input type="button" value="Edit Profile">
+                    </div>
+
+                </form>
+
+            </div>
+
         </div>
     </div>
-
-    <main style="height: 100vh;"></main>
 
     <?php include("Includes/footer.php"); ?>
 
