@@ -11,14 +11,14 @@ We at AirBar aim to provide users with a simple, fast and secure airline managem
 ## Tech Used 💻
 
 * Languages used
-* * HTML5
+  * HTML5
   * PHP
   * Javascript
   * Bootstrap
   * Css
   * Sql
 * Software used:
-* * Xampp
+  * Xampp
   * Vs code
   * Git
   * GitHub
