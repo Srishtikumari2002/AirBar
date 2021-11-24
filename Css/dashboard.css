@@ -1,4 +1,24 @@
 body {
+    background: #004bade1;
+}
+
+.header-bg {
     /* background: linear-gradient(to bottom, #004aad 0%, #00ffff 100%); */
-    background: white;
+    background: #004aad;
+    height: 6.6rem;
+}
+
+.user-details-area {
+    text-align:center;
+    width: 100%;
+    padding: 20px;
+}
+
+.user-details-area .user-details{
+    margin: 0 auto;
+}
+
+.user-details h1 {
+    color: white;
+    font-size: 3.6rem;
 }

@@ -26,6 +26,13 @@
 <body>
 
     <?php include("Includes/header.php"); ?>
+    <div class="header-bg"></div>
+
+    <div class="user-details-area">
+        <div class="user-details">
+            <h1>My Profile</h1>
+        </div>
+    </div>
 
     <main style="height: 100vh;"></main>
 
