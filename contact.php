@@ -36,7 +36,7 @@
           <div class="topic">Phone</div>
           <div class="text-one">+91 9310519210</div>
           <div class="text-two">+91 8076654886</div>
-          <div class="text-three">+91 8766393891</div>
+          <div class="text-one">+91 8766393891</div>
 
         </div>
         <div class="email details">
