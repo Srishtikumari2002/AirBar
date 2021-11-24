@@ -21,6 +21,9 @@ body{
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   margin: 10rem auto;
 }
+.con-container a {
+  text-decoration: none;
+}
 .con-container .content{
   display: flex;
   align-items: center;
@@ -117,7 +120,7 @@ body{
   background: #5029bc;
 }
 
-/* @media (max-width: 950px) {
+@media (max-width: 950px) {
   .con-container{
     width: 90%;
     padding: 30px 40px 40px 35px ;
@@ -149,4 +152,4 @@ body{
    width: 100%;
    margin-left: 0;
  }
-} */
+}
