@@ -1,0 +1,145 @@
+body{
+    background-color: white;
+    background-size: cover;
+}
+
+/* Carousel container */
+.carousel-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    font-size: 0;
+}
+
+.know-more {
+    position: absolute;
+    top: 50%;
+    right: 25%;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 2rem;
+    text-decoration: none;
+    color: #313131;
+    padding: 1rem 2rem;
+    transition: background-color 0.5s ease;
+}
+
+.know-more:hover {
+    background-color: #d3d3d3;
+}
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -16px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+/* Position the "prev button" after pop-up */
+.prev {
+    left: 38%;
+}
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    transition: background-color 0.6s ease;
+}
+#dot1{top: 90%;
+    left: 65%;}
+#dot2{top: 90%;
+    left: 67%;}
+#dot3{top: 90%;
+    left: 69%;}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.flight-find {
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    z-index: 1;
+    width: 30%;
+    background-color: white;
+    border-radius: 5%;
+    padding: 15px;
+}
+
+
+.flight-find button {
+    background-color:#004aad;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 1rem;
+    padding: 10px;
+    outline: none;
+    border: none;
+    position: relative;
+    right: 0; 
+    cursor: pointer; 
+    padding: 1rem 1rem;
+}
+
+#exchange {
+    position: absolute;
+    top: 50%;
+    right: 48%;
+    font-size: 18px;
+    color: #646464;
+    transform: rotate(180deg);
+    transition: transform 0.5s;
+}
+
+#exchange:hover {
+    color: #004aad;
+}
+
+#exchange:active {
+    transform: rotate(0deg);
+    transition: 0s;   
+}
