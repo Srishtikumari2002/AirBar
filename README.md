@@ -25,6 +25,6 @@ We at AirBar aim to provide users with a simple, fast and secure airline managem
 
 ## Contributors 🎉️
 
-* Srishti Kumari
-* Simran
-* Simran Singh
+* ![Srishti Kumari](https://github.com/Srishtikumari2002)
+* ![Simran]()
+* ![Simran Singh](https://github.com/SimranSingh123)
