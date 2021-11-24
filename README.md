@@ -10,7 +10,10 @@ We at AirBar aim to provide users with a simple, fast and secure airline managem
 
 ## Tech Used 💻
 
+---
+
 * Languages used
+
 * * HTML5
   * PHP
   * Javascript
@@ -23,8 +26,11 @@ We at AirBar aim to provide users with a simple, fast and secure airline managem
   * Git
   * GitHub
 
-## Contributors 🎉️ 
+## Contributors 🎉️
+
+---
 
 * Srishti Kumari
+
 * Simran
 * Simran Singh
