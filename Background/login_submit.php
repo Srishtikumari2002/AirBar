@@ -33,7 +33,7 @@ while($row=mysqli_fetch_assoc($result)){
             echo 1;
             $_SESSION['id']=$row['id'];
             $_SESSION['name']=$row['name'];
-            $_SESSION['email']=$row['name'];
+            $_SESSION['email']=$row['email'];
         }
         else{
             echo 2;
