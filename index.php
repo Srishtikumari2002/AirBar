@@ -1,150 +1,63 @@
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <!-- title of the page  -->
-    <title>Book Domestic & International Flights</title>
-
-    <!-- css stylesheets -->
-    <link rel="stylesheet" href="Css/index.css">
-
-    <!-- favicon -->
-    <link rel="icon" href="Images/favicon.png" type="image/png">
-
-    <!-- javascript files -->
-    <script defer src="Js/index.js"></script>
-
-</head>
-
-<body>
-
-    <?php include("Includes/header.php"); ?>
-
-    <!-- image carousel -->
-    <div class="carousel-container">
-
-        <div class="mySlides fade">
-            <a href="#"><img src="Images/Vaxi_Fare.png" style="width:100%"></a>
-            <a href="index.php" class="know-more">Know More</a>
-        </div>
-        <div class="mySlides fade">
-            <a href="#"><img src="Images/fast_booking.png" style="width:100%"></a>
-            <a href="index.php" class="know-more">Know More</a>
-        </div>
-        <div class="mySlides fade">
-            <a href="#"><img src="Images/home_delivery.png" style="width:100%"></a>
-        </div>
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-        <!-- The dots/circles -->
-        <a id="dot1" class="dot" onclick="currentSlide(1)"></a>
-        <a id="dot2" class="dot" onclick="currentSlide(2)"></a>
-        <a id="dot3" class="dot" onclick="currentSlide(3)"></a>
-    </div>
-
-    <!-- flight search form  -->
-    <form>
-    <div class="flight-find">
-        <h1>Book a Flight</h1>
-
-        <div class="radios">
-            <label for="oneway" class="radio">
-                <input type="radio" name="tripcycle" id="oneway" class="radio__input">
-                <div class="radio__radio"></div>
-                One Way
-            </label>
-            <label for="roundtrip" class="radio">
-                <input type="radio" name="tripcycle" id="roundtrip" class="radio__input">
-                <div class="radio__radio"></div>
-                Round Trip
-            </label>
-        </div>
-
-        <div class="row">
-            <div class="form left">
-                <input type="text" name="from" required autocomplete="off">
-                <label for="from" class="label-name">
-                    <span class="content-name">From</span>
-                </label>
-            </div>
-            <i id="exchange" class="fas fa-exchange-alt"></i>
-            <div class="form right">
-                <input type="text" name="to" required autocomplete="off">
-                <label for="to" class="label-name">
-                    <span class="content-name">To</span>
-                </label>
-            </div>
-        </div>
-
-        <div class="form left">
-            <input type="date" unselectable="on" onselectstart="return false;" onmousedown="return false;" name="depart"
-                required autocomplete="off" value="">
-            <label for="depart" class="label-name">
-                <span class="content-name">Departure Date</span>
-            </label>
-        </div>
-
-        <div class="form right">
-            <input type="date" unselectable="on" onselectstart="return false;" onmousedown="return false;"
-                name="arrival" required autocomplete="off" value="">
-            <label for="arrival" class="label-name">
-                <span class="content-name">Return Date</span>
-            </label>
-        </div>
-
-        <div class="form left">
-            <input type="text" name="passenger" required autocomplete="off">
-            <label for="passenger" class="label-name">
-                <span class="content-name">Passenger(s)</span>
-            </label>
-        </div>
-
-        <div class="form right">
-            <input type="text" name="currency" required autocomplete="off">
-            <label for="currency" class="label-name">
-                <span class="content-name">Pay in (currency)</span>
-            </label>
-        </div>
-
-        <div class="radios">
-            <label for="student" class="radio">
-                <input type="radio" name="concession" id="student" class="radio__input">
-                <div class="radio__radio"></div>
-                Students
-            </label>
-            <label for="forces" class="radio">
-                <input type="radio" name="concession" id="forces" class="radio__input">
-                <div class="radio__radio"></div>
-                Armed Forces
-            </label>
-        </div>
-
-        <div class="left">
-            <label for="docs" class="radio">
-                <input type="radio" name="concession" id="docs" class="radio__input">
-                <div class="radio__radio"></div>
-                Doctors & Nurses
-            </label>
-        </div>
-
-        <div class="right">
-            <button type="submit">Search Flight→</button>
-        </div>
-    </div>
-    </form>
-
-    <main style="height: 100vh;"></main>
-
-    <?php include("Includes/footer.php"); ?>
-
-</body>
-
-</html>
+<?php
+echo '<!DOCTYPE html>';
+echo '<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->';
+echo '<html lang="en" dir="ltr">';
+echo '<head>';
+echo '<meta charset="UTF-8">';
+echo '<title> Responsive Contact Us Form  | CodingLab </title>';
+echo '<link rel="stylesheet" href="style.css">';
+echo '<!-- Fontawesome CDN Link -->';
+echo '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>';
+echo '<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+echo '</head>';
+echo '<body>';
+echo '<div class="container">';
+echo '<div class="content">';
+echo '<div class="left-side">';
+echo '<div class="address details">';
+echo '<i class="fas fa-map-marker-alt"></i>';
+echo '<div class="topic">Address</div>';
+echo '<div class="text-one">Surkhet, NP12</div>';
+echo '<div class="text-two">Birendranagar 06</div>';
+echo '</div>';
+echo '<div class="phone details">';
+echo '<i class="fas fa-phone-alt"></i>';
+echo '<div class="topic">Phone</div>';
+echo '<div class="text-one">+91 9310519210</div>';
+echo '<div class="text-two">+91 8076654886</div>';
+echo '<div class="text-three">+91 8766393891</div>';
+echo '';
+echo '</div>';
+echo '<div class="email details">';
+echo '<i class="fas fa-envelope"></i>';
+echo '<div class="topic">Email</div>';
+echo '<div class="text-one">simran033btcsai20@gmail.com</div>';
+echo '<div class="text-two">simran065btcsai20@igdtuw.ac.in</div>';
+echo '<div class="text-two">srishti060btcsai20@igdtuw.ac.in</div>';
+echo '</div>';
+echo '</div>';
+echo '<div class="right-side">';
+echo '<div class="topic-text">Send us a message</div>';
+echo '<p>If you have any work from me or any types of quries related to my tutorial, you can send me message from here. It's my pleasure to help you.</p>';
+echo '<form action="#">';
+echo '<div class="input-box">';
+echo '<input type="text" placeholder="Enter your name">';
+echo '</div>';
+echo '<div class="input-box">';
+echo '<input type="text" placeholder="Enter your email">';
+echo '</div>';
+echo '<div class="input-box message-box">';
+echo '<textarea placeholder="Enter your message"></textarea>';
+echo '</div>';
+echo '<div class="button">';
+echo '<input type="button" value="Send Now" >';
+echo '</div>';
+echo '</form>';
+echo '</div>';
+echo '</div>';
+echo '</div>';
+echo '';
+echo '</body>';
+echo '</html>';
+echo '';
+?>
