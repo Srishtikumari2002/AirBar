@@ -6,6 +6,20 @@ window.addEventListener('scroll', function () {
     header.classList.toggle('scrolling-active', windowlPosition);
 });
 
+// open and close side bar
+
+const sidenav = document.getElementById("sidenav");
+const navbtn = document.getElementById("nav_open");
+const closenav = document.getElementById("nav_close");
+
+navbtn.addEventListener("click", function(e){
+    sidenav.classList.remove("inactive");
+});
+
+closenav.addEventListener("click", function(e){
+    sidenav.classList.add("inactive");
+});
+
 // login popup
 var modal = document.getElementById("logreg-popup");
 var log_btn = document.getElementById("log-btn");
@@ -54,17 +68,3 @@ window.onclick = function (event) {
         modal.style.display = "none";
     }
 }
-
-// open and close side bar
-
-const sidenav = document.getElementById("sidenav");
-const navbtn = document.getElementById("nav_open");
-const closenav = document.getElementById("nav_close");
-
-navbtn.addEventListener("click", function(e){
-    sidenav.classList.remove("inactive");
-});
-
-closenav.addEventListener("click", function(e){
-    sidenav.classList.add("inactive");
-});

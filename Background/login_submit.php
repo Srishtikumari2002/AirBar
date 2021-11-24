@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $db_hostname="localhost:3308";
 $db_username="root";
 $db_password="python trial";
@@ -29,6 +31,9 @@ while($row=mysqli_fetch_assoc($result)){
         $abc=1;
         if($row["psd"]==$psd){
             echo 1;
+            $_SESSION['id']=$row['id'];
+            $_SESSION['name']=$row['name'];
+            $_SESSION['email']=$row['name'];
         }
         else{
             echo 2;

@@ -25,7 +25,7 @@
 </head>
 
 <body>
-
+    <?php session_start();?>
     <!-- top navigation bar  -->
     <header>
 
@@ -47,12 +47,21 @@
                     <li>
                         <a href="#" class="nav-link">FAQs</a>
                     </li>
-                    <li>
-                        <a id="log-btn" class="nav-link">Login</a>
-                    </li>
-                    <li>
-                        <a id="reg-btn" class="nav-link">Register</a>
-                    </li>
+
+                    <?php if (isset($_SESSION['email']) && !empty($_SESSION['email'])){ ?>
+                        <li>
+                            <a id="logout-btn" href="Background/logout.php" class="nav-link">Logout</a>
+                        </li>
+                    <?php  } else { ?>
+                        <li>
+                            <a id="log-btn" class="nav-link">Login</a>
+                        </li>
+                        <li>
+                            <a id="reg-btn" class="nav-link">Register</a>
+                        </li>
+                            
+                    <?php }?>
+
                     <li>
                         <div class="search-box">
                             <button class="btn-search"><i class="fas fa-search"></i></button>
@@ -61,6 +70,7 @@
                     </li>
                 </ul>
                 <a href="#" id="nav-cta">Book Now</a>
+                <a href="dashboard.php" <?php echo (isset($_SESSION['email']) && !empty($_SESSION['email'])) ? '':'style="display:none;"'?>>&nbsp;<i class="fas fa-user-tie fa-2x"></i></a>
             </nav>
         </div>
     </header>
