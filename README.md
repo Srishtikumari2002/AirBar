@@ -4,8 +4,6 @@
 
 ---
 
-
-
 We at AirBar aim to provide users with a simple, fast and secure airline management service.
 
 ## Tech Used 💻
@@ -17,6 +15,7 @@ We at AirBar aim to provide users with a simple, fast and secure airline managem
   * Bootstrap
   * Css
   * Sql
+  * Jquery
 * Software used:
   * Xampp
   * Vs code
