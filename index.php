@@ -134,7 +134,7 @@
         </div>
 
         <div class="form left">
-            <input type="date" unselectable="on" onselectstart="return false;" onmousedown="return false;" name="depart"
+            <input id="depart-date" type="date" unselectable="on" onselectstart="return false;" onmousedown="return false;" name="depart"
                 required autocomplete="off" value="">
             <label for="depart" class="label-name">
                 <span class="content-name">Departure Date</span>
@@ -142,7 +142,7 @@
         </div>
 
         <div class="form right">
-            <input type="date" unselectable="on" onselectstart="return false;" onmousedown="return false;"
+            <input id="return-date" type="date" unselectable="on" onselectstart="return false;" onmousedown="return false;"
                 name="arrival" required autocomplete="off" value="">
             <label for="arrival" class="label-name">
                 <span class="content-name">Return Date</span>
@@ -150,17 +150,39 @@
         </div>
 
         <div class="form left">
-            <input type="text" name="passenger" required autocomplete="off">
+            <input type="number" name="passenger" required autocomplete="off">
             <label for="passenger" class="label-name">
                 <span class="content-name">Passenger(s)</span>
             </label>
         </div>
 
         <div class="form right">
-            <input type="text" name="currency" required autocomplete="off">
+            <input list="currency" type="text" name="currency" required autocomplete="off">
             <label for="currency" class="label-name">
                 <span class="content-name">Pay in (currency)</span>
             </label>
+            <datalist id="currency">
+                    <?php
+
+                        $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+                        if(!$conn){
+                            exit;
+                        }
+                        $sql="SELECT name from currencies";
+
+                        $result = mysqli_query($conn,$sql);
+                        if(!$result){
+                            echo 0;
+                            exit;
+                        }
+                        while($row=mysqli_fetch_assoc($result)){
+                            echo "<option value='$row[name]'></option>";
+                        }
+
+                        mysqli_close($conn);
+                    ?>
+                    
+                </datalist>
         </div>
 
         <div class="radios">
@@ -189,7 +211,7 @@
         </div>
     </div>
     </form>
-    
+
     <main style="height: 100vh;background:#004bade1;"></main>
 
     <?php include("Includes/footer.php"); ?>
