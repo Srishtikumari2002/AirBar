@@ -48,3 +48,13 @@ function showSlidesauto() {
 }
 
 window.addEventListener("load", showSlidesauto);
+
+const exchange  = document.getElementById("exchange");
+const departure = document.getElementById("from");
+const arrival = document.getElementById("to");
+
+exchange.onclick = function(){
+    let temp = departure.value;
+    departure.value = arrival.value;
+    arrival.value = temp;
+};

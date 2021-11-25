@@ -25,7 +25,12 @@
 
 <body>
 
-    <?php include("Includes/header.php"); ?>
+    <?php 
+
+        include("Includes/header.php");
+        include("Background/mysql_details.php");
+    ?>
+    
 
     <!-- image carousel -->
     <div class="carousel-container">
@@ -70,17 +75,61 @@
 
         <div class="row">
             <div class="form left">
-                <input type="text" name="from" required autocomplete="off">
+                <input id="from" list="departure" type="text" name="from" required autocomplete="off">
                 <label for="from" class="label-name">
                     <span class="content-name">From</span>
                 </label>
+                <datalist id="departure">
+                    <?php
+
+                        $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+                        if(!$conn){
+                            exit;
+                        }
+                        $sql="SELECT cities.c_name as cname, CONCAT(cities.c_name, ', ', states.st_name,', ', countries.cn_name)as 'CITIES' FROM cities JOIN states on cities.st_id = states.id  JOIN countries on states.cn_id = countries.id";
+
+                        $result = mysqli_query($conn,$sql);
+                        if(!$result){
+                            echo 0;
+                            exit;
+                        }
+                        while($row=mysqli_fetch_assoc($result)){
+                            echo "<option value='$row[cname]'>$row[CITIES]</option>";
+                        }
+
+                        mysqli_close($conn);
+                    ?>
+                    
+                </datalist>
             </div>
             <i id="exchange" class="fas fa-exchange-alt"></i>
             <div class="form right">
-                <input type="text" name="to" required autocomplete="off">
+                <input id="to" list="arrival" type="text" name="to" required autocomplete="off">
                 <label for="to" class="label-name">
                     <span class="content-name">To</span>
                 </label>
+                <datalist id="arrival">
+                    <?php
+
+                        $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+                        if(!$conn){
+                            exit;
+                        }
+                        $sql="SELECT cities.c_name as cname, CONCAT(cities.c_name, ', ', states.st_name,', ', countries.cn_name)as 'CITIES' FROM cities JOIN states on cities.st_id = states.id  JOIN countries on states.cn_id = countries.id";
+
+                        $result = mysqli_query($conn,$sql);
+                        if(!$result){
+                            echo 0;
+                            exit;
+                        }
+                        while($row=mysqli_fetch_assoc($result)){
+                            echo "<option value='$row[cname]'>$row[CITIES]</option>";
+                        }
+
+                        mysqli_close($conn);
+                    ?>
+                    
+                </datalist>
             </div>
         </div>
 
@@ -140,18 +189,7 @@
         </div>
     </div>
     </form>
-
-    <div class="cell">
-
-            <div class="discover-more">
-                <h1 class="d1">Discover More</h1>
-            </div>
-
-            <div class="col-md-2 col-3 d-none">
-                <a class="view-all-cta service-viewall">View All</a>
-            </div>
-    </div>
-
+    
     <main style="height: 100vh;background:#004bade1;"></main>
 
     <?php include("Includes/footer.php"); ?>

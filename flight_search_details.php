@@ -28,7 +28,7 @@
 
     <?php
 
-        include("mysql_details.php");
+        include("Background/mysql_details.php");
 
         $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
         if(!$conn){
@@ -36,19 +36,17 @@
             exit;
         }
 
+        $sql="select * from users"; //will update
 
-$email = $_POST['email'];
-$psd = $_POST['psd'];
+        $result = mysqli_query($conn,$sql);
 
-$sql="select * from users";
+        if(!$result){
+            echo "";
+            exit;
+        }
 
-$result = mysqli_query($conn,$sql);
-if(!$result){
-    echo 0;
-    exit;
-}
-
-    
+        while($row=mysqli_fetch_assoc($result)){}
+        mysqli_close($conn);    
     ?>
 
     <?php include("Includes/footer.php"); ?>

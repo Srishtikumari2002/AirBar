@@ -58,4 +58,86 @@ INSERT INTO states (st_name, cn_id) VALUES
 ('Daman and Diu',1),
 ('Delhi',1),
 ('Lakshadweep',1),
-('Puducherry',1)
+('Puducherry',1);
+
+create table cities (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    c_name varchar(50) not null,
+    st_id int,
+    FOREIGN KEY (st_id) REFERENCES states(id)
+);
+
+INSERT INTO cities(c_name,st_id) VALUES
+('Port Blair', 30),
+('Visakhapatnam',1),
+('Hyderabad',25),
+('Guwahati',3),
+('New Delhi',34),
+('Dabolim',6),
+('Ahmedabad',7),
+('Bengaluru',12),
+('Mangalore',12),
+('Kochi',13),
+('Kozhikode',13),
+('Thiruvananthapuram',13),
+('Mumbai',15),
+('Nagpur',15),
+('Imphal',16),
+('Bhubaneswar',20),
+('Amritsar',21),
+('Jaipur',22),
+('Chennai',24),
+('Coimbatore',24),
+('Tiruchirapalli',24),
+('Lucknow',28),
+('Varanasi',28),
+('Kolkata',29),
+('Gaya',4),
+('Surat',7),
+('Vadodara',7),
+('Srinagar',10),
+('Kannur',13),
+('Pune',15),
+('Ranchi',11),
+('Siliguri',29);
+
+create table airports (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    ap_name varchar(255) not null,
+    ct_id int,
+    FOREIGN KEY (ct_id) REFERENCES cities(id)
+);
+
+Insert INTO airports(ap_name,ct_id) VALUES
+('Veer Savarkar International Airport',1),
+('Visakhapatnam Airport',2),
+('Rajiv Gandhi International Airport',3),
+('Lokpriya Gopinath Bordoloi International Airport',4),
+('Indira Gandhi International Airport',5),
+('Dabolim Airport (Goa International Airport)',6),
+('Sardar Vallabhbhai Patel International Airport',7),
+('Kempegowda International Airport',8),
+('Mangalore International Airport',9),
+('Cochin International Airport',10),
+('Calicut International Airport	',11),
+('Trivandrum International Airport',12),
+('Chhatrapati Shivaji International Airport',13),
+('Dr. Babasaheb Ambedkar International Airport',14),
+('Tulihal Airport',15),
+('Biju Patnaik International Airport',16),
+('Sri Guru Ram Dass Jee International Airport',17),
+('Jaipur International Airport',18),
+('Chennai International Airport',19),
+('Coimbatore International Airport',20),
+('Tiruchirapalli International Airport',21),
+('Chaudhary Charan Singh Airport',22),
+('Lal Bahadur Shastri Airport',23),
+('Netaji Subhash Chandra Bose International Airport',24),
+('Gaya Airport',25),
+('Surat International Airport',26),
+('Vadodara International Airport',27),
+('Sheikh ul-Alam International Airport',28),
+('Kannur International Airport',29),
+('Pune International Airport',30),
+('Birsa Munda Airport',31),
+('Bagdogra Airport',32);
