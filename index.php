@@ -141,6 +141,17 @@
     </div>
     </form>
 
+    <div class="cell">
+
+            <div class="discover-more">
+                <h1 class="d1">Discover More</h1>
+            </div>
+
+            <div class="col-md-2 col-3 d-none">
+                <a class="view-all-cta service-viewall">View All</a>
+            </div>
+    </div>
+
     <main style="height: 100vh;background:#004bade1;"></main>
 
     <?php include("Includes/footer.php"); ?>
