@@ -51,7 +51,7 @@
     </div>
 
     <!-- flight search form  -->
-    <form>
+    <form action="flight_details.php" method="POST">
     <div class="flight-find">
         <h1>Book a Flight</h1>
 
