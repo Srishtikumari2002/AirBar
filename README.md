@@ -27,3 +27,5 @@ We at AirBar aim to provide users with a simple, fast and secure airline managem
 * Srishti Kumari
 * Simran
 * Simran Singh
+
+[![Spotify](https://air-bar.vercel.app/api/spotify)](https://open.spotify.com/user/31zhpj44grvnk7jl6zbayvd7dxmm)
