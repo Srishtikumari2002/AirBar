@@ -32,9 +32,9 @@
 
         $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
         if(!$conn){
-            echo 0;
             exit;
         }
+
 
         $sql="select * from users"; //will update
 

@@ -586,3 +586,8 @@ header{
 .sidebar button:hover {
     background-color: #14151642;
 }
+
+.sidenavbar {
+    background: white;
+    font-size: 2rem;
+}

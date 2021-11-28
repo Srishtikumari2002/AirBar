@@ -136,6 +136,59 @@
     <!-- side navigation bar  -->
     <div class="sidebar inactive" id="sidenav">
         <button id="nav_close">x</button>
+        <div class="sidenavbar">
+            <ul>
+                <?php if (isset($_SESSION['email']) && !empty($_SESSION['email'])){ ?>
+                    <li>
+                        <span>View Profile</span>
+                    </li>
+                    <li>
+                        <a href="Background/logout.php">Logout</a>
+                    </li>
+                    <li>
+                        <span>My Bookings</span>
+                    </li>
+                    <li>
+                        <span>My Account</span>
+                    </li>
+                <?php  } else { ?>
+                    <li>
+                        <a >Login\Signup</a>
+                    </li>     
+                <?php }?>
+
+                <li>
+                    <span>Home</span>
+                </li>
+                <li>
+                    <span>Book a Flight</span>
+                </li>
+                <li>
+                    <span>Web Check-in</span>
+                </li>
+                <li>
+                    <span>Flight Status</span>
+                </li>
+                <li>
+                    <span>View/Edit Booking(s)</span>
+                </li>
+                <li>
+                    <span>Update Contact Details</span>
+                </li>
+                <li>
+                    <span>Offers</span>
+                </li>
+                <li>
+                    <span>FAQs</span>
+                </li>
+                <li>
+                    <span>Contact Us</span>
+                </li>
+                <li>
+                    <a href="index.php" class="logo"> AirBar <img src="Images/logo.png" alt="" width="44" height="40" /></a>
+                </li>
+            </ul>
+        </div> 
     </div>
 
 </body>

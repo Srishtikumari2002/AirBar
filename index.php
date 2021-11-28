@@ -90,7 +90,6 @@
 
                         $result = mysqli_query($conn,$sql);
                         if(!$result){
-                            echo 0;
                             exit;
                         }
                         while($row=mysqli_fetch_assoc($result)){
@@ -119,7 +118,6 @@
 
                         $result = mysqli_query($conn,$sql);
                         if(!$result){
-                            echo 0;
                             exit;
                         }
                         while($row=mysqli_fetch_assoc($result)){
@@ -172,7 +170,6 @@
 
                         $result = mysqli_query($conn,$sql);
                         if(!$result){
-                            echo 0;
                             exit;
                         }
                         while($row=mysqli_fetch_assoc($result)){
