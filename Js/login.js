@@ -56,7 +56,8 @@ function login_animate() {
 
                 if (res == 0) {
                     alert("Unable to reach the server.\n Please try again.")
-                    login_animate();
+                    position = 0;
+                    hideCurrent(putQuestion);
                 }
                 else if (res == 1) {
                     login.className = '';
@@ -65,9 +66,8 @@ function login_animate() {
                 }
                 else if (res == 2) {
                     alert("Incorrect Password!")
-                    // login.className = '';
-                    // login.classList.add('close');
-                    login_animate();
+                    position = 0;
+                    hideCurrent(putQuestion);
                 }
                 else {
                     alert("Please create your account on airbar.")
