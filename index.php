@@ -82,21 +82,21 @@
                 <datalist id="departure">
                     <?php
 
-                        $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
-                        if(!$conn){
-                            exit;
-                        }
-                        $sql="SELECT cities.c_name as cname, CONCAT(cities.c_name, ', ', states.st_name,', ', countries.cn_name)as 'CITIES' FROM cities JOIN states on cities.st_id = states.id  JOIN countries on states.cn_id = countries.id";
+                        // $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+                        // if(!$conn){
+                        //     exit;
+                        // }
+                        // $sql="SELECT cities.c_name as cname, CONCAT(cities.c_name, ', ', states.st_name,', ', countries.cn_name)as 'CITIES' FROM cities JOIN states on cities.st_id = states.id  JOIN countries on states.cn_id = countries.id";
 
-                        $result = mysqli_query($conn,$sql);
-                        if(!$result){
-                            exit;
-                        }
-                        while($row=mysqli_fetch_assoc($result)){
-                            echo "<option value='$row[cname]'>$row[CITIES]</option>";
-                        }
+                        // $result = mysqli_query($conn,$sql);
+                        // if(!$result){
+                        //     exit;
+                        // }
+                        // while($row=mysqli_fetch_assoc($result)){
+                        //     echo "<option value='$row[cname]'>$row[CITIES]</option>";
+                        // }
 
-                        mysqli_close($conn);
+                        // mysqli_close($conn);
                     ?>
                     
                 </datalist>
@@ -110,21 +110,21 @@
                 <datalist id="arrival">
                     <?php
 
-                        $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
-                        if(!$conn){
-                            exit;
-                        }
-                        $sql="SELECT cities.c_name as cname, CONCAT(cities.c_name, ', ', states.st_name,', ', countries.cn_name)as 'CITIES' FROM cities JOIN states on cities.st_id = states.id  JOIN countries on states.cn_id = countries.id";
+                        // $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+                        // if(!$conn){
+                        //     exit;
+                        // }
+                        // $sql="SELECT cities.c_name as cname, CONCAT(cities.c_name, ', ', states.st_name,', ', countries.cn_name)as 'CITIES' FROM cities JOIN states on cities.st_id = states.id  JOIN countries on states.cn_id = countries.id";
 
-                        $result = mysqli_query($conn,$sql);
-                        if(!$result){
-                            exit;
-                        }
-                        while($row=mysqli_fetch_assoc($result)){
-                            echo "<option value='$row[cname]'>$row[CITIES]</option>";
-                        }
+                        // $result = mysqli_query($conn,$sql);
+                        // if(!$result){
+                        //     exit;
+                        // }
+                        // while($row=mysqli_fetch_assoc($result)){
+                        //     echo "<option value='$row[cname]'>$row[CITIES]</option>";
+                        // }
 
-                        mysqli_close($conn);
+                        // mysqli_close($conn);
                     ?>
                     
                 </datalist>
@@ -162,21 +162,21 @@
             <datalist id="currency">
                     <?php
 
-                        $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
-                        if(!$conn){
-                            exit;
-                        }
-                        $sql="SELECT name from currencies";
+                        // $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+                        // if(!$conn){
+                        //     exit;
+                        // }
+                        // $sql="SELECT name from currencies";
 
-                        $result = mysqli_query($conn,$sql);
-                        if(!$result){
-                            exit;
-                        }
-                        while($row=mysqli_fetch_assoc($result)){
-                            echo "<option value='$row[name]'></option>";
-                        }
+                        // $result = mysqli_query($conn,$sql);
+                        // if(!$result){
+                        //     exit;
+                        // }
+                        // while($row=mysqli_fetch_assoc($result)){
+                        //     echo "<option value='$row[name]'></option>";
+                        // }
 
-                        mysqli_close($conn);
+                        // mysqli_close($conn);
                     ?>
                     
                 </datalist>
