@@ -58,12 +58,14 @@ function login_animate() {
 
                 if (res == 0) {
                     alert("Unable to reach the server.\n Please try again.")
+                    login_animate();
                 }
                 else if (res == 1) {
                     location.reload();
                 }
                 else if (res == 2) {
                     alert("Incorrect Password!")
+                    login_animate();
                 }
                 else {
                     alert("Please create your account on airbar.")
