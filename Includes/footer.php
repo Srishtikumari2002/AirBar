@@ -11,6 +11,7 @@
 
     <!-- css stylesheets -->
     <link rel="stylesheet" href="Css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
 
     <!-- importing third party javascript -->
 
@@ -18,67 +19,68 @@
     <!-- custom javascript files -->
 
     <!-- bootstrap  -->
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css"
-        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
-        
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+
 
 </head>
 
 <body>
-
     <footer>
-
-        <div class="container">
-            <div class="sec aboutus">
-                <h2>About Us</h2>
-                        <p>We at AirBar aim to provide user with fast,simple and secure airline management system.</p>
+        <div class="article">
+            <div class="left box">
+                <div class="upper">
+                    <div class="topic">About us</div>
+                    <p>We at AirBar aim to provide user with fast,simple and secure airline management system.</p>
+                </div>
+                <div class="lower">
+                    <div class="topic">Contact us</div>
+                    <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>8076654886</a>
+                    </div>
+                    <div class="email">
+                        <a href="#"><i class="fas fa-envelope"></i>simran65btcsai@igdtuw.ac.in</a>
+                    </div>
+                    <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>8076654886</a>
+                    </div>
+                    <div class="email">
+                        <a href="#"><i class="fas fa-envelope"></i>simran33btcsai@igdtuw.ac.in</a>
+                    </div>
+                    <div class="phone">
+                        <a href="#"><i class="fas fa-phone-volume"></i>8076654886</a>
+                    </div>
+                    <div class="email">
+                        <a href="#"><i class="fas fa-envelope"></i>simran13059@gmail.com</a>
+                    </div>
+                </div>
             </div>
-            <ul class="sci">
-                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></i></a></li>
-                <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></i></a></li>
-                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></i></a></li>
-                <ul>
+            <div class="middle box">
+                <div class="topic">Our Services</div>
+                <div><a href="#">Software source aPI, Development</a></div>
+                <div><a href="#">Software dev Source code, Reasearch</a></div>
+                <div><a href="#">Software User Interface Source code</a></div>
+                <div><a href="#">Laravel Development, Source code</a></div>
+                <div><a href="#">Mobile Application Source code</a></div>
+                <div><a href="#">Blogging & Earning</a></div>
+            </div>
+            <div class="right box">
+                <div class="topic">Subscribe us</div>
+                <form action="#">
+                    <input type="text" placeholder="Enter Your email address">
+                    <input type="submit" name="" value="Send">
+                    <div class="media-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </form>
+            </div>
         </div>
-
-        <div class="sec quicklinks">
-            <h2>Quick Links</h2>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Help</a></li>
-                <li><a href="#">Terms & Conditions</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+        <div class="bottom">
+            <p>Copyright © 2021 <a href="#">AirBar</a> All rights reserved</p>
         </div>
-
-        <div class="sec contact">
-            <h2> Contact Info</h2>
-            <ul class="info">
-                <li>
-                    <span><i class="fa fa-phone" aria-hidden="true"></i>&nbsp;</span>
-                    <p><a href="tel:8766393891">+91 8766393891</a><br>
-                        <a href="tel:8076654886">+91 8076654886</a><br>
-                        <a href="tel:9310519210">+91 9310519210</a>
-                    </p>
-                </li>
-                <li>
-                    <span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;</span>
-                    <p><a href="mailto:airbarsupport@gmail.com"> airbarsupport@gmail.com</a></p>
-                </li>
-            </ul>
-
-        </div>
-
     </footer>
-
-    <div class="copyrightText">
-        <p>Copyright @ 2021 AirBar. All Rights Reserved.</p>
-    </div>
-
 </body>
 
 </html>
