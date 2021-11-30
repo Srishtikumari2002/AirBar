@@ -28,7 +28,11 @@ footer .fcontent .box{
   width: 33%;
   transition: all 0.4s ease;
 }
+<<<<<<< HEAD
 footer .fcontent .topic{
+=======
+footer .fcontent .ftopic{
+>>>>>>> 55fb0e7f956d198f1d25031390cadf8d3820df6a
   font-size: 22px;
   font-weight: 600;
   color: #fff;
@@ -38,7 +42,11 @@ footer .fcontent .topic{
 footer .fcontent p{
   text-align: justify;
 }
+<<<<<<< HEAD
 footer .fcontent .lower .topic{
+=======
+footer .fcontent .lower .ftopic{
+>>>>>>> 55fb0e7f956d198f1d25031390cadf8d3820df6a
   margin: 24px 0 5px 0;
 }
 footer .fcontent .lower i{
@@ -50,7 +58,11 @@ footer .fcontent .middle{
 footer .fcontent .middle a{
   line-height: 32px;
 }
+<<<<<<< HEAD
 footer .fcontent .right input[type="text"]{
+=======
+footer .fcontent .fright input[type="text"]{
+>>>>>>> 55fb0e7f956d198f1d25031390cadf8d3820df6a
   height: 45px;
   width: 100%;
   outline: none;
@@ -61,7 +73,11 @@ footer .fcontent .right input[type="text"]{
   font-size: 17px;
   border: 2px solid #222222;
 }
+<<<<<<< HEAD
 footer .fcontent .right input[type="submit"]{
+=======
+footer .fcontent .fright input[type="submit"]{
+>>>>>>> 55fb0e7f956d198f1d25031390cadf8d3820df6a
   height: 42px;
   width: 100%;
   font-size: 18px;
@@ -75,7 +91,11 @@ footer .fcontent .right input[type="submit"]{
   border: 2px solid #eb2f06;
   transition: all 0.3s ease-in-out;
 }
+<<<<<<< HEAD
 .fcontent .right input[type="submit"]:hover{
+=======
+.fcontent .fright input[type="submit"]:hover{
+>>>>>>> 55fb0e7f956d198f1d25031390cadf8d3820df6a
   background: none;
   color:  #eb2f06;
 }
@@ -118,7 +138,11 @@ footer a:hover{
   footer .fcontent .box{
     width: 50%;
   }
+<<<<<<< HEAD
   .fcontent .right{
+=======
+  .fcontent .fright{
+>>>>>>> 55fb0e7f956d198f1d25031390cadf8d3820df6a
     margin-top: 40px;
   }
 }

@@ -20,12 +20,12 @@
         <div class="fcontent">
             <div class="left box">
                 <div class="upper">
-                    <div class="topic">About us</div>
+                    <div class="ftopic">About us</div>
                       <p>CodingLab is a channel where you can learn HTML,
                       CSS, and also JavaScript along with creative CSS Animations and Effects.</p>
                 </div>
                 <div class="lower">
-                    <div class="topic">Contact us</div>
+                    <div class="ftopic">Contact us</div>
                     <div class="phone">
                         <a href="#"><i class="fas fa-phone-volume"></i>+007 9089 6767</a>
                     </div>
@@ -35,7 +35,7 @@
                 </div>
             </div>
             <div class="middle box">
-                <div class="topic">Our Services</div>
+                <div class="ftopic">Our Services</div>
                 <div><a href="#">Web Design, Development</a></div>
                 <div><a href="#">Web UX Design, Reasearch</a></div>
                 <div><a href="#">Web User Interface Design</a></div>
@@ -43,8 +43,8 @@
                 <div><a href="#">Mobile Application Design</a></div>
                 <div><a href="#">Wire raming & Prototyping</a></div>
             </div>
-            <div class="right box">
-                <div class="topic">Subscribe us</div>
+            <div class="fright box">
+                <div class="ftopic">Subscribe us</div>
                   <form action="#">
                       <input type="text" placeholder="Enter email address">
                       <input type="submit" name="" value="Send">
