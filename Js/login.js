@@ -44,37 +44,10 @@ function login_animate() {
 
         // remove the box if there is no next question
 
-        $.ajax({
-            url: "./Background/login_submit.php",
-            type: "POST",
-            data: {
-                email: log_questions[0].value,
-                psd: log_questions[1].value
-            },
-            cache: false,
-            success: function (res) {
+        login.className = '';
+        login.classList.add('close');
 
-                if (res == 0) {
-                    alert("Unable to reach the server.\n Please try again.")
-                    position = 0;
-                    hideCurrent(putQuestion);
-                }
-                else if (res == 1) {
-                    login.className = '';
-                    login.classList.add('close');
-                    location.reload();
-                }
-                else if (res == 2) {
-                    alert("Incorrect Password!")
-                    position = 0;
-                    hideCurrent(putQuestion);
-                }
-                else {
-                    alert("Please create your account on airbar.")
-                }
-                
-            }
-        });
+        location.reload();
 
     }
 
@@ -87,14 +60,39 @@ function login_animate() {
         // check if the pattern matches
         if (!lif.value.match(log_questions[position].pattern || /.+/)) wrong()
         else ok(function () {
+            if (position == 0) {
+                Url = "./Background/log_mail_submit.php"
+                detail = { email: log_questions[0].value }
+            } else {
+                Url = "./Background/login_submit.php"
+                detail = {
 
-            // set the progress of the background
-            lprogress.style.width = ++position * 100 / log_questions.length + 'vw'
+                    email: log_questions[0].value,
+                    psd: log_questions[1].value
+                }
+            }
+            $.ajax({
+                url: Url,
+                type: "POST",
+                data: detail,
+                cache: false,
+                success: function (res) {
 
-            // if there is a new question, hide current and load next
-            if (log_questions[position]) hideCurrent(putQuestion)
-            else hideCurrent(done)
+                    if (res == 0) {
+                        alert("Unable to reach the server.\n Please try again.")
+                    }
+                    else if (res == 1) {
+                        // set the progress of the background
+                        lprogress.style.width = ++position * 100 / log_questions.length + 'vw'
 
+                        // if there is a new question, hide current and load next
+                        if (log_questions[position]) hideCurrent(putQuestion)
+                        else hideCurrent(done)
+                    }
+                    else wrong()
+
+                }
+            });
         })
 
     }
