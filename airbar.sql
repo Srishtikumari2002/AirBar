@@ -149,6 +149,6 @@ create table currencies(
     name varchar(255) not null,
     c_id int not null,
     foreign key(c_id) REFERENCES countries(id)
-    )
+    );
 
 Insert into currencies(name,c_id) values("Indian Rupees",1);
