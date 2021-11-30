@@ -43,8 +43,6 @@ function login_animate() {
     function done() {
 
         // remove the box if there is no next question
-        login.className = '';
-        login.classList.add('close');
 
         $.ajax({
             url: "./Background/login_submit.php",
@@ -61,16 +59,20 @@ function login_animate() {
                     login_animate();
                 }
                 else if (res == 1) {
+                    login.className = '';
+                    login.classList.add('close');
                     location.reload();
                 }
                 else if (res == 2) {
                     alert("Incorrect Password!")
+                    // login.className = '';
+                    // login.classList.add('close');
                     login_animate();
                 }
                 else {
                     alert("Please create your account on airbar.")
                 }
-                // setTimeout(1, 50)
+                
             }
         });
 

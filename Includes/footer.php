@@ -21,8 +21,7 @@
             <div class="left box">
                 <div class="upper">
                     <div class="topic">About us</div>
-                      <p>CodingLab is a channel where you can learn HTML,
-                      CSS, and also JavaScript along with creative CSS Animations and Effects.</p>
+                      <p>AiBar is the best airline service. We am to provide our users with a fast, secure and simple airline management system.</p>
                 </div>
                 <div class="lower">
                     <div class="topic">Contact us</div>
@@ -59,7 +58,7 @@
             </div>
         </div>
             <div class="bottom">
-                <p>Copyright © 2020 <a href="#">AirBar</a> All rights reserved</p>
+                <p>Copyright © 2021 <a href="#">AirBar</a> All rights reserved</p>
             </div>
         
     </footer>
