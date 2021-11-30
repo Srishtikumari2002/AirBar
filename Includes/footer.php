@@ -17,7 +17,7 @@
 
 <body>
     <footer>
-        <div class="fcontent">
+        <div class="content">
             <div class="left box">
                 <div class="upper">
                     <div class="topic">About us</div>

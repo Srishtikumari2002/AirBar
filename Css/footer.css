@@ -13,7 +13,7 @@ footer{
   left: 0;
   background: #111;
 }
-footer .fcontent{
+footer .content{
   max-width: 1350px;
   margin: auto;
   padding: 20px;
@@ -21,36 +21,36 @@ footer .fcontent{
   flex-wrap: wrap;
   justify-content: space-between;
 }
-footer .fcontent p,a{
+footer .content p,a{
   color: #fff;
 }
-footer .fcontent .box{
+footer .content .box{
   width: 33%;
   transition: all 0.4s ease;
 }
-footer .fcontent .topic{
+footer .content .topic{
   font-size: 22px;
   font-weight: 600;
   color: #fff;
   margin-bottom: 16px;
 
 }
-footer .fcontent p{
+footer .content p{
   text-align: justify;
 }
-footer .fcontent .lower .topic{
+footer .content .lower .topic{
   margin: 24px 0 5px 0;
 }
-footer .fcontent .lower i{
+footer .content .lower i{
   padding-right: 16px;
 }
-footer .fcontent .middle{
+footer .content .middle{
   padding-left: 80px;
 }
-footer .fcontent .middle a{
+footer .content .middle a{
   line-height: 32px;
 }
-footer .fcontent .right input[type="text"]{
+footer .content .right input[type="text"]{
   height: 45px;
   width: 100%;
   outline: none;
@@ -61,7 +61,7 @@ footer .fcontent .right input[type="text"]{
   font-size: 17px;
   border: 2px solid #222222;
 }
-footer .fcontent .right input[type="submit"]{
+footer .content .right input[type="submit"]{
   height: 42px;
   width: 100%;
   font-size: 18px;
@@ -75,11 +75,11 @@ footer .fcontent .right input[type="submit"]{
   border: 2px solid #eb2f06;
   transition: all 0.3s ease-in-out;
 }
-.fcontent .right input[type="submit"]:hover{
+.content .right input[type="submit"]:hover{
   background: none;
   color:  #eb2f06;
 }
-footer .fcontent .media-icons a{
+footer .content .media-icons a{
   font-size: 16px;
   height: 45px;
   width: 45px;
@@ -91,7 +91,7 @@ footer .fcontent .media-icons a{
   margin: 30px 5px 0 0;
   transition: all 0.3s ease;
 }
-.fcontent .media-icons a:hover{
+.content .media-icons a:hover{
   border-color: #eb2f06;
 }
 footer .bottom{
@@ -110,15 +110,15 @@ footer a:hover{
   color: #eb2f06;
 }
 @media (max-width:1100px) {
-  footer .fcontent .middle{
+  footer .content .middle{
     padding-left: 50px;
   }
 }
 @media (max-width:950px){
-  footer .fcontent .box{
+  footer .content .box{
     width: 50%;
   }
-  .fcontent .right{
+  .content .right{
     margin-top: 40px;
   }
 }
@@ -126,11 +126,11 @@ footer a:hover{
   footer{
     position: relative;
   }
-  footer .fcontent .box{
+  footer .content .box{
     width: 100%;
     margin-top: 30px;
   }
-  footer .fcontent .middle{
+  footer .content .middle{
     padding-left: 0;
   }
 }
