@@ -24,6 +24,8 @@ if(!$result){
 while($row=mysqli_fetch_assoc($result)){
     if($row["email"]==$email){
         $abc=1;
+        echo 1;
+        break;
     }
     else{
         $abc=0;
