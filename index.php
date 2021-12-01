@@ -213,16 +213,16 @@
     <div class="card">
 
         <div class="image">
-           <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
+           <img src="Images/Vaxi_Fare_offer.png">
         </div>
         <div class="title">
             <h1>
-                Write title Here
+                Vaxi Fare
             </h1>
         </div>
         <div class="des">
-            <p>You can Add Desccription Here...</p>
-            <button>Read More...</button>
+            <p>up to 20% off for all our vaccinated fliers.</p>
+            <button>Know More</button>
         </div>
 
     </div>
