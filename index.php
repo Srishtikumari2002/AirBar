@@ -210,7 +210,7 @@
     </div>
     </form>
 
-    <main style="height: 100vh;background:#004bade1;">
+    <main style="height: 100vh;">
     <div class="card">
 
         <div class="image">
