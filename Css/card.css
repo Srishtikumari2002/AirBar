@@ -1,26 +1,9 @@
-/* *{
-    margin: 0px;
-    padding: 0px;
-} */
-   /* body{
-    font-family: arial;
-   } */
-.main{
-  margin: 2%;
-}
-.main h1
-{
-  padding: 20%;
-  font-weight: bold;
-  font-size: 20px;
-}
-
 .card{
-     width: 20%;
-     display: inline-block;
-     box-shadow: 2px 2px 20px black;
-     border-radius: 5px; 
-     margin: 2%;
+  width: 20%;
+  display: inline-block;
+  box-shadow: 2px 2px 20px black;
+  border-radius: 5px; 
+  margin: 2%;
 }
 
 .image img{
@@ -30,18 +13,15 @@
 }
 
 .title{
- 
   text-align: center;
   padding: 10px;
-  
 }
 
 .des{
   padding: 3px;
   text-align: center;
- 
   padding-top: 10px;
-        border-bottom-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
