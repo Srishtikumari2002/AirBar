@@ -214,11 +214,12 @@
 
         <div class="image">
            <img src="Images/Vaxi_Fare_offer.png">
-        </div>
+        
         <div class="title">
             <h1>
                 Vaxi Fare
             </h1>
+        </div>
         </div>
         <div class="des">
             <p>up to 20% off for all our vaccinated fliers.</p>
