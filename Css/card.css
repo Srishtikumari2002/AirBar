@@ -1,6 +1,7 @@
 .card{
   width: 20%;
-  display: inline-block;
+  /* display: inline-block; */
+  display: flex;
   box-shadow: 2px 2px 20px black;
   border-radius: 5px; 
   margin: 2%;
