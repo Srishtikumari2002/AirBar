@@ -571,8 +571,7 @@ header{
 
 .sidebar button {
     color: black;
-    margin: -20px 5px 0 0;
-    padding: - 8px 0 8px;
+    padding: 0 8px 2px 8px;
     background-color: transparent;
     font-size: 3.5rem;
     font-weight: bold;
@@ -590,4 +589,18 @@ header{
 .sidenavbar {
     background: white;
     font-size: 2rem;
+}
+
+.sidebar li{
+    outline:none;
+    padding: 5px;
+    margin: 5px 0 5px 0;
+    border-bottom: 2px sollid rgb(13, 30, 128);
+}
+.sidebar a{
+    text-decoration: none;
+    color: rgb(14, 13, 13);
+    /* font-size: 1.6rem; */
+    cursor: pointer;
+    outline: none;
 }
