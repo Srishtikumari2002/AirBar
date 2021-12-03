@@ -210,42 +210,45 @@
     </div>
     </form>
 
-    <main style="height: 100vh;">
-    <div class="card">
-
-        <div class="image">
-           <img src="Images/Vaxi_Fare_offer.png">
-        </div>
-        <div class="title">
-            <h1>
-                Vaxi Fare
-            </h1>
-        </div>
-        <div class="des">
-            <p>up to 20% off for all our vaccinated fliers.</p>
-            <button>Know More</button>
-        </div>
-
-    </div>
+    <!-- offers  -->
+    <div class="offers">
+        <h1>OFFERS</h1>
     
-    <div class="card">
+        <div class="card">
 
-        <div class="image">
-           <img src="Images/Vaxi_Fare_offer.png">
+            <div class="image">
+               <img src="Images/Vaxi_Fare_offer.png">
+            </div>
+            <div class="title">
+                <h1>
+                    Vaxi Fare
+                </h1>
+            </div>
+            <div class="des">
+                <p>up to 20% off for all our vaccinated fliers.</p>
+                <button>Know More</button>
+            </div>
+
         </div>
-        <div class="title">
-            <h1>
-                Vaxi Fare
-            </h1>
-        </div>
-        <div class="des">
-            <p>up to 20% off for all our vaccinated fliers.</p>
-            <button>Know More</button>
+                        
+        <div class="card">
+
+            <div class="image">
+               <img src="Images/Vaxi_Fare_offer.png">
+            </div>
+            <div class="title">
+                <h1>
+                    Vaxi Fare
+                </h1>
+            </div>
+            <div class="des">
+                <p>up to 20% off for all our vaccinated fliers.</p>
+                <button>Know More</button>
+            </div>
+
         </div>
 
-    </div>
-    </main>
-
+    <main style="height:20vh;"></main>
     <?php include("Includes/footer.php"); ?>
 
 </body>
