@@ -30,6 +30,7 @@ while($row=mysqli_fetch_assoc($result)){
             $_SESSION['id']=$row['id'];
             $_SESSION['name']=$row['name'];
             $_SESSION['email']=$row['email'];
+            $_SESSION['level']=$row['level'];
         }
         else{
             echo 2;
