@@ -283,7 +283,8 @@ header{
     width: 100%;
     position: relative;
     height: 50px;
-    overflow: hidden
+    overflow: hidden;
+    padding-top: 5px;
 }
 
 .form input[type="date"]::-webkit-calendar-picker-indicator {
