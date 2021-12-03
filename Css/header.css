@@ -257,7 +257,7 @@ header{
 .form input:valid + .label-name .content-name {
 
     transform: translateY(-150%);
-    font-size: 14px;
+    font-size: 12px;
     color: #004aad;
 
 }
@@ -284,7 +284,6 @@ header{
     position: relative;
     height: 50px;
     overflow: hidden;
-    padding-top: 5px;
 }
 
 .form input[type="date"]::-webkit-calendar-picker-indicator {

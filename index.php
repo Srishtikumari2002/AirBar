@@ -142,7 +142,7 @@
 
         <div class="form right">
             <input id="return-date" type="date" unselectable="on" onselectstart="return false;" onmousedown="return false;"
-                name="arrival" required autocomplete="off" value="">
+                name="arrival" autocomplete="off" value="">
             <label for="arrival" class="label-name">
                 <span class="content-name">Return Date</span>
             </label>
