@@ -44,16 +44,16 @@
             <a href="#"><img src="Images/fast_booking.png" style="width:100%"></a>
             <a href="index.php" class="know-more">Know More</a>
         </div>
-        <div class="mySlides fade">
+        <!-- <div class="mySlides fade">
             <a href="#"><img src="Images/home_delivery.png" style="width:100%"></a>
-        </div>
+        </div> -->
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
         <!-- The dots/circles -->
         <a id="dot1" class="dot" onclick="currentSlide(1)"></a>
         <a id="dot2" class="dot" onclick="currentSlide(2)"></a>
-        <a id="dot3" class="dot" onclick="currentSlide(3)"></a>
+        <!-- <a id="dot3" class="dot" onclick="currentSlide(3)"></a> -->
     </div>
 
     <!-- flight search form  -->
