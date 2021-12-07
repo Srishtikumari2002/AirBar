@@ -63,12 +63,12 @@
 
         <div class="radios">
             <label for="oneway" class="radio">
-                <input type="radio" name="tripcycle" id="oneway" class="radio__input">
+                <input type="radio" name="tripcycle" value="one-way" id="oneway" class="radio__input">
                 <div class="radio__radio"></div>
                 One Way
             </label>
             <label for="roundtrip" class="radio">
-                <input type="radio" name="tripcycle" id="roundtrip" class="radio__input">
+                <input type="radio" name="tripcycle" value="roundtrip" id="roundtrip" class="radio__input">
                 <div class="radio__radio"></div>
                 Round Trip
             </label>
