@@ -109,7 +109,7 @@
 		</tbody>
     </table>
 
-	<main style="height:20vh;"></main>
+	<main style="height:60vh;"></main>
 
     <?php include("Includes/footer.php"); ?>
 

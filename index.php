@@ -216,8 +216,9 @@
     </form>
 
     <!-- offers  -->
-    <div class="offers">
-        <h1>OFFERS</h1>
+    <div style="margin: 0 auto;width: 80%;">
+        <br><br>
+        <h1 style="margin: 0 auto;font-size: 4rem;color:#222222;">&nbsp; Offers</h1>
     
         <div class="card">
 
@@ -239,7 +240,9 @@
         <div class="card">
 
             <div class="image">
-               <img src="Images/Vaxi_Fare_offer.png">
+               <img src="Images/student
+               
+               _offer.png">
             </div>
             <div class="title">
                 <h1>
@@ -252,8 +255,9 @@
             </div>
 
         </div>
+    </div>
 
-    <main style="height:20vh;"></main>
+    <main style="height:50vh;"></main>
     <?php include("Includes/footer.php"); ?>
 
 </body>

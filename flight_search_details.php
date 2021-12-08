@@ -115,6 +115,8 @@
 
     </table>
 
+    <main style="height:50vh;"></main>
+
     <?php include("Includes/footer.php"); ?>
 
 </body>

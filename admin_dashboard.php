@@ -66,6 +66,12 @@
         </div>
     </div>
 
+    <div class="profile-container">
+        <div class="profile-content">
+            hi
+        </div>
+    </div>
+
     <?php include("Includes/footer.php"); ?>
 
 </body>
