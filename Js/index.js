@@ -75,3 +75,4 @@ if (mm < 10) {
 today = yyyy + '-' + mm + '-' + dd;
 document.getElementById("depart-date").setAttribute("min", today);
 document.getElementById("return-date").setAttribute("min", today);
+document.getElementById("return-date").value = today;

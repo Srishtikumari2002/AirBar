@@ -19,7 +19,7 @@
     <link rel="icon" href="Images/favicon.png" type="image/png">
 
     <!-- javascript files -->
-    <script defer src="Js/dashboard.js"></script>
+    <script defer src=""></script>
 
 </head>
 

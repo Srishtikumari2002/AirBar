@@ -63,12 +63,12 @@
 
         <div class="radios">
             <label for="oneway" class="radio">
-                <input type="radio" name="tripcycle" value="one-way" id="oneway" class="radio__input">
+                <input type="radio" required name="tripcycle" value="one-way" id="oneway" class="radio__input">
                 <div class="radio__radio"></div>
                 One Way
             </label>
             <label for="roundtrip" class="radio">
-                <input type="radio" name="tripcycle" value="roundtrip" id="roundtrip" class="radio__input">
+                <input type="radio" required name="tripcycle" value="roundtrip" id="roundtrip" class="radio__input">
                 <div class="radio__radio"></div>
                 Round Trip
             </label>
@@ -142,17 +142,22 @@
 
         <div class="form right">
             <input id="return-date" type="date" unselectable="on" onselectstart="return false;" onmousedown="return false;"
-                name="arrival" autocomplete="off" value="">
+                name="arrival" required autocomplete="off">
             <label for="arrival" class="label-name">
                 <span class="content-name">Return Date</span>
             </label>
         </div>
 
         <div class="form left">
-            <input type="number" name="passenger" required autocomplete="off">
-            <label for="passenger" class="label-name">
-                <span class="content-name">Passenger(s)</span>
+            <input type="text" list="travel-class" name="travel-class" required autocomplete="off">
+            <label for="travel-class" class="label-name">
+                <span class="content-name">Class</span>
             </label>
+            <datalist id="travel-class">
+                <option value="Economy"></option>
+                <option value="Business"></option>
+                <option value="First"></option>
+            </datalist>
         </div>
 
         <div class="form right">
@@ -185,12 +190,12 @@
 
         <div class="radios">
             <label for="student" class="radio">
-                <input type="radio" name="concession" id="student" class="radio__input">
+                <input type="radio" required name="concession" id="student" class="radio__input">
                 <div class="radio__radio"></div>
                 Students
             </label>
             <label for="forces" class="radio">
-                <input type="radio" name="concession" id="forces" class="radio__input">
+                <input type="radio" required name="concession" id="forces" class="radio__input">
                 <div class="radio__radio"></div>
                 Armed Forces
             </label>
@@ -198,7 +203,7 @@
 
         <div class="left">
             <label for="docs" class="radio">
-                <input type="radio" name="concession" id="docs" class="radio__input">
+                <input type="radio" required name="concession" id="docs" class="radio__input">
                 <div class="radio__radio"></div>
                 Doctors & Nurses
             </label>
