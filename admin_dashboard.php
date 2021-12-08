@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- title of the page  -->
-    <title>Book Domestic & International Flights</title>
+    <title>Admin Dashboard</title>
 
     <!-- css stylesheets -->
     <link rel="stylesheet" href="Css/dashboard.css">

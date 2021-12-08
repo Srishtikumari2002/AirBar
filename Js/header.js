@@ -12,11 +12,11 @@ const sidenav = document.getElementById("sidenav");
 const navbtn = document.getElementById("nav_open");
 const closenav = document.getElementById("nav_close");
 
-navbtn.addEventListener("click", function(e){
+navbtn.addEventListener("click", function (e) {
     sidenav.classList.remove("inactive");
 });
 
-closenav.addEventListener("click", function(e){
+closenav.addEventListener("click", function (e) {
     sidenav.classList.add("inactive");
 });
 
@@ -29,23 +29,37 @@ var signup = document.getElementById("signup");
 var signin_btn = document.getElementById("signin");
 var log_model = document.getElementById("login-modal");
 var reg_model = document.getElementById("register-modal");
+var areg_btn = document.getElementById("admin-reg-btn");
+var alog_btn = document.getElementById("admin-signin");
+var areg_model = document.getElementById("admin-register-modal");
 
-function show_login(){
+function show_login() {
     reg_model.style.display = "none";
     log_model.style.display = "block";
+    areg_model.style.display = "none";
 }
 
-function show_register(){
+function show_register() {
     reg_model.style.display = "block";
     log_model.style.display = "none";
+    areg_model.style.display = "none";
 }
 
+function show_admin_register() {
+    reg_model.style.display = "none";
+    log_model.style.display = "none";
+    areg_model.style.display = "block";
+}
 
-signin_btn.onclick = function(){
+signin_btn.onclick = function () {
     show_login();
 };
 
-signup.onclick = function(){
+alog_btn.onclick = function () {
+    show_login();
+}
+
+signup.onclick = function () {
     show_register();
 }
 
@@ -57,6 +71,11 @@ log_btn.onclick = function () {
 reg_btn.onclick = function () {
     modal.style.display = "block";
     show_register();
+}
+
+areg_btn.onclick = function () {
+    modal.style.display = "block";
+    show_admin_register();
 }
 
 close_btn.onclick = function () {

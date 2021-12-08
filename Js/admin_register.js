@@ -1,20 +1,20 @@
-var questions = [
-  { question: "What's your full name?", type: "text" },
-  { question: "What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ },
-  { question: "Create your password", type: "password" }
-];
+var admin_log_questions = [
+    { question: "What's your full name?", type: "text" },
+    { question: "What's your email?", pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/ },
+    { question: "Create your password", type: "password" }
+  ];
+  
+  /**********    
+    Credits for the design go to XavierCoulombeM
+    https://dribbble.com/shots/2510592-Simple-aregister-form 
+   
+   **********/
+  
+function admin_aregister_animate() {
 
-/**********    
-  Credits for the design go to XavierCoulombeM
-  https://dribbble.com/shots/2510592-Simple-register-form 
- 
- **********/
-
-function register_animate() {
-
-  var tTime = 100  // transition transform time from #register in ms
-  var wTime = 200  // transition width time from #register in ms
-  var eTime = 1000 // transition width time from ril in ms
+  var tTime = 100  // transition transform time from #aregister in ms
+  var wTime = 200  // transition width time from #aregister in ms
+  var eTime = 1000 // transition width time from aril in ms
 
   // init
   // --------------
@@ -22,8 +22,8 @@ function register_animate() {
 
   putQuestion()
 
-  rnext.addEventListener('click', validate)
-  rif.addEventListener('keyup', function (e) {
+  arnext.addEventListener('click', validate)
+  arif.addEventListener('keyup', function (e) {
     transform(0, 0) // i.e. hack to redraw
     if (e.keyCode == 13) validate()
   })
@@ -33,27 +33,27 @@ function register_animate() {
 
   // load the next question
   function putQuestion() {
-    ril.innerHTML = questions[position].question
-    rif.value = ''
-    rif.type = questions[position].type || 'text'
-    rif.focus()
+    aril.innerHTML = admin_log_questions[position].question
+    arif.value = ''
+    arif.type = admin_log_questions[position].type || 'text'
+    arif.focus()
     showCurrent()
   }
 
-  // when all the questions have been answered
+  // when all the admin_log_questions have been answered
   function done() {
 
     // remove the box if there is no next question
-    register.className = '';
-    register.classList.add('close');
+    aregister.className = '';
+    aregister.classList.add('close');
 
     $.ajax({
-      url: "./Background/register_submit.php",
+      url: "./Background/aregister_submit.php",
       type: "POST",
       data: {
-        name: questions[0].value,
-        email: questions[1].value,
-        psd: questions[2].value
+        name: admin_log_questions[0].value,
+        email: admin_log_questions[1].value,
+        psd: admin_log_questions[2].value
       },
       cache: false,
       success: function (response) {
@@ -68,11 +68,11 @@ function register_animate() {
         }
         else {
           // add the h1 at the end with the welcome text
-          pre.appendChild(document.createTextNode('Welcome ' + questions[0].value + '!'));
+          pre.appendChild(document.createTextNode('Welcome ' + admin_log_questions[0].value + '!'));
           pre.appendChild(document.createTextNode("\nPlease Login to continue."));
         }
         setTimeout(function () {
-          register.parentElement.appendChild(h1)
+          aregister.parentElement.appendChild(h1)
           setTimeout(function () { h1.style.opacity = 5 }, 50)
         }, eTime)
       }
@@ -83,15 +83,15 @@ function register_animate() {
   function validate() {
 
     // set the value of the field into the array
-    questions[position].value = rif.value
+    admin_log_questions[position].value = arif.value
 
     // check if the pattern matches
-    if (!rif.value.match(questions[position].pattern || /.+/)) wrong()
+    if (!arif.value.match(admin_log_questions[position].pattern || /.+/)) wrong()
     else ok(function () {
 
       if (position == 1) {
         Url = "./Background/log_mail_submit.php"
-        detail = { email: questions[1].value }
+        detail = { email: admin_log_questions[1].value }
 
         $.ajax({
           url: Url,
@@ -105,10 +105,10 @@ function register_animate() {
             }
             else if (res == 2) {
               // set the progress of the background
-              rprogress.style.width = ++position * 100 / questions.length + 'vw'
+              arprogress.style.width = ++position * 100 / admin_log_questions.length + 'vw'
 
               // if there is a new question, hide current and load next
-              if (questions[position]) hideCurrent(putQuestion)
+              if (admin_log_questions[position]) hideCurrent(putQuestion)
               else hideCurrent(done)
             }
             else {
@@ -121,10 +121,10 @@ function register_animate() {
       }
       else {
         // set the progress of the background
-        rprogress.style.width = ++position * 100 / questions.length + 'vw'
+        arprogress.style.width = ++position * 100 / admin_log_questions.length + 'vw'
 
         // if there is a new question, hide current and load next
-        if (questions[position]) hideCurrent(putQuestion)
+        if (admin_log_questions[position]) hideCurrent(putQuestion)
         else hideCurrent(done)
       }
     })
@@ -135,35 +135,35 @@ function register_animate() {
   // --------------
 
   function hideCurrent(callback) {
-    ric.style.opacity = 0
-    rip.style.transition = 'none'
-    rip.style.width = 0
+    aric.style.opacity = 0
+    arip.style.transition = 'none'
+    arip.style.width = 0
     setTimeout(callback, wTime)
   }
 
   function showCurrent(callback) {
-    ric.style.opacity = 1
-    rip.style.transition = ''
-    rip.style.width = '100%'
+    aric.style.opacity = 1
+    arip.style.transition = ''
+    arip.style.width = '100%'
     setTimeout(callback, wTime)
   }
 
   function transform(x, y) {
-    register.style.transform = 'translate(' + x + 'px ,  ' + y + 'px)'
+    aregister.style.transform = 'translate(' + x + 'px ,  ' + y + 'px)'
   }
 
   function ok(callback) {
-    register.className = '';
-    register.classList.add('mainform');
+    aregister.className = '';
+    aregister.classList.add('mainform');
     setTimeout(transform, tTime * 0, 0, 10)
     setTimeout(transform, tTime * 1, 0, 0)
     setTimeout(callback, tTime * 2)
   }
 
   function wrong(callback) {
-    register.className = ''
-    register.classList.add('mainform');
-    register.classList.add('wrong');
+    aregister.className = ''
+    aregister.classList.add('mainform');
+    aregister.classList.add('wrong');
     for (var i = 0; i < 6; i++) // shaking motion
       setTimeout(transform, tTime * i, (i % 2 * 2 - 1) * 20, 0)
     setTimeout(transform, tTime * 6, 0, 0)
@@ -172,5 +172,5 @@ function register_animate() {
 
 }
 
-var reg_btn = document.getElementById("reg-btn");
-reg_btn.addEventListener("click", register_animate());
+var areg_btn = document.getElementById("admin-reg-btn");
+areg_btn.addEventListener("click", admin_aregister_animate());

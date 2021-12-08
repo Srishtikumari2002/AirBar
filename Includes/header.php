@@ -21,6 +21,7 @@
     <script defer src="Js/header.js"></script>
     <script defer src="Js/login.js"></script>
     <script defer src="Js/register.js"></script>
+    <script defer src="Js/admin_register.js"></script>
 
 </head>
 
@@ -47,21 +48,6 @@
                     <li>
                         <a href="#" class="nav-link">FAQs</a>
                     </li>
-
-                    <?php if (isset($_SESSION['email']) && !empty($_SESSION['email'])){ ?>
-                        <li>
-                            <a id="logout-btn" href="Background/logout.php" class="nav-link">Logout</a>
-                        </li>
-                    <?php  } else { ?>
-                        <li>
-                            <a id="log-btn" class="nav-link">Login</a>
-                        </li>
-                        <li>
-                            <a id="reg-btn" class="nav-link">Register</a>
-                        </li>
-                            
-                    <?php }?>
-
                     <li>
                         <div class="search-box">
                             <button class="btn-search"><i class="fas fa-search"></i></button>
@@ -69,10 +55,18 @@
                         </div>
                     </li>
                 </ul>
+
+                <?php if (isset($_SESSION['email']) && !empty($_SESSION['email'])){ ?>
+                        <a id="logout-btn" href="Background/logout.php" class="nav-link">Logout</a>
+                <?php  } else { ?>
+                        <a id="log-btn" class="nav-link">Login</a>
+                        <a id="reg-btn" class="nav-link">Register</a>
+                <?php }?>
+                
                 <a class="nav-link" <?php echo (isset($_SESSION['email']) && !empty($_SESSION['email'])) ? '':'style="display:none;"'?>>Hi <?php echo $_SESSION['name']?> !&nbsp;</a>
                 <a href="#" id="nav-cta">Book Now</a>
                 <a href="dashboard.php" <?php echo (isset($_SESSION['email']) && !empty($_SESSION['email']) && ($_SESSION['level'] == 0)) ? '':'style="display:none;"'?>>&nbsp;<i class="fas fa-user-tie fa-2x"></i></a>
-                <a href="admin_dashboard.php" <?php echo (isset($_SESSION['email']) && !empty($_SESSION['email']) && ($_SESSION['level'] == 1)) ? '':'style="display:none;"'?>>&nbsp;<i class="fas fa-user-tie fa-2x"></i></a>
+                <a href="admin/admin_dashboard.php" <?php echo (isset($_SESSION['email']) && !empty($_SESSION['email']) && ($_SESSION['level'] == 1)) ? '':'style="display:none;"'?>>&nbsp;<i class="fas fa-user-tie fa-2x"></i></a>
             </nav>
         </div>
     </header>
@@ -131,6 +125,30 @@
                 </div>
             </div>
 
+            <div id="admin-register-modal">
+                <!-- Admin Registration Form -->
+                <p style="font-size:3rem;">Admin <br> Registration</p>
+
+                <div class="logpoptit">
+                    <label>Existing user?<a id="admin-signin" class="popup-link">Login</a></label>
+                </div>
+
+                <div id="arprogress" class="progress"></div>
+
+                <div class="center">
+                    <div id="aregister" class="mainform">
+
+                        <i id="arnext" class="fas fa-arrow-circle-right forward"></i>
+
+                        <div id="aric" class="inputContainer">
+                            <input id="arif" required autofocus />
+                            <label id="aril" class="inputLabel"></label>
+                            <div id="arip" class="inputProgress"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -163,6 +181,9 @@
                 </li>
                 <li>
                     <span>Book a Flight</span>
+                </li>
+                <li>
+                    <a id="admin-reg-btn">Admin Registration</a>
                 </li>
                 <li>
                     <span>Web Check-in</span>

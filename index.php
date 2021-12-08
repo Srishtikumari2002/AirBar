@@ -238,11 +238,11 @@
             </div>
             <div class="title">
                 <h1>
-                    Vaxi Fare
+                    Student Special
                 </h1>
             </div>
             <div class="des">
-                <p>up to 20% off for all our vaccinated fliers.</p>
+                <p>up to 15% off for all student fliers above 12.</p>
                 <button>Know More</button>
             </div>
 
