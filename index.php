@@ -223,7 +223,7 @@
         <div class="card">
 
             <div class="image">
-               <img src="Images/Vaxi_Fare_offer.png">
+               <img src="Images/Vaxi_Fare_offer.png" width='307' height='200'>
             </div>
             <div class="title">
                 <h1>
@@ -240,9 +240,7 @@
         <div class="card">
 
             <div class="image">
-               <img src="Images/student
-               
-               _offer.png">
+               <img src="Images/student_offer.png" width='307' height='200'>
             </div>
             <div class="title">
                 <h1>
