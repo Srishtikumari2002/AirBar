@@ -183,9 +183,6 @@
                     <span>Book a Flight</span>
                 </li>
                 <li>
-                    <a id="admin-reg-btn">Admin Registration</a>
-                </li>
-                <li>
                     <span>Web Check-in</span>
                 </li>
                 <li>
@@ -205,6 +202,9 @@
                 </li>
                 <li>
                     <span>Contact Us</span>
+                </li>
+                <li>
+                    <a id="admin-reg-btn">Admin Registration</a>
                 </li>
                 <li>
                     <a href="index.php" class="logo"> AirBar <img src="Images/logo.png" alt="" width="44" height="40" /></a>
