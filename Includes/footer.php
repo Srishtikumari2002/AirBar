@@ -58,7 +58,7 @@
             </div>
         </div>
             <div class="bottom">
-                <p>Copyright © 2021 <a href="#">AirBar</a> All rights reserved</p>
+                <p>Copyright © 2021 <a href="index.php">AirBar</a> All rights reserved</p>
             </div>
         
     </footer>

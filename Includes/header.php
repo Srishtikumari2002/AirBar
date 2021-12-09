@@ -66,7 +66,7 @@
                 <a class="nav-link" <?php echo (isset($_SESSION['email']) && !empty($_SESSION['email'])) ? '':'style="display:none;"'?>>Hi <?php echo $_SESSION['name']?> !&nbsp;</a>
                 <a href="#" id="nav-cta">Book Now</a>
                 <a href="dashboard.php" <?php echo (isset($_SESSION['email']) && !empty($_SESSION['email']) && ($_SESSION['level'] == 0)) ? '':'style="display:none;"'?>>&nbsp;<i class="fas fa-user-tie fa-2x"></i></a>
-                <a href="admin/admin_dashboard.php" <?php echo (isset($_SESSION['email']) && !empty($_SESSION['email']) && ($_SESSION['level'] == 1)) ? '':'style="display:none;"'?>>&nbsp;<i class="fas fa-user-tie fa-2x"></i></a>
+                <a href="admin_dashboard.php" <?php echo (isset($_SESSION['email']) && !empty($_SESSION['email']) && ($_SESSION['level'] == 1)) ? '':'style="display:none;"'?>>&nbsp;<i class="fas fa-user-tie fa-2x"></i></a>
             </nav>
         </div>
     </header>
