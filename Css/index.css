@@ -143,3 +143,10 @@ body{
     transform: rotate(0deg);
     transition: 0s;   
 }
+
+@media (max-width:1470px){
+    .flight-find {
+        position: relative;
+        width:90%;
+    }
+}

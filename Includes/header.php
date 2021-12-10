@@ -26,8 +26,12 @@
 </head>
 
 <body>
+    
+    <div id="loader"></div>
+
     <?php session_start();?>
     <!-- top navigation bar  -->
+
     <header>
 
         <div class="container">
