@@ -20,12 +20,17 @@
     <link rel="icon" href="Images/favicon.png" type="image/png">
 
     <!-- javascript files -->
+	<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 </head>
 
 <body>
 
-    <?php include("Includes/header.php"); ?>
+    <?php 
+		include("Includes/header.php"); 
+		include("Background/mysql_details.php");
+	?>
     <div class="header-bg"></div>
 
     <div class="profile-container">
@@ -99,8 +104,6 @@
 
 	                		<?php
 
-                    		    include("Background/mysql_details.php");
-
                     		    $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
                     		    if(!$conn){
                     		        exit;
@@ -171,45 +174,95 @@
 									<div class="panel-heading">
 										<legend style="text-align: center;">Flight Information</legend>
 									</div>
+									<form class="form-inline">
 									<div class="panel-body">
-										<div class="input-group">
-											<label for="class">Airbus No:</label>
-											<select class="form-control">
-												<option>1</option>
-												<option>2</option>
-												<option>3</option>
-											</select>
-											<a href="#"></a>
-										</div>
-										<br>
-										<form class="form-inline">
 											<div class="input-group">
-												<label for="">Flight No:</label>
-												<input type="number" class="form-control" placeholder="Flight No." name="" required>
+												<label for="class">Flight No:</label>
+												<select class="form-control">
+												<?php
+													$conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+                    						    	if(!$conn){
+                    						    	    exit;
+                    						    	}
+												
+                    						    	$sql="select ac_id,ac_number from Aircraft";
+												
+                    						    	$result = mysqli_query($conn,$sql);
+												
+                    						    	if(!$result){
+                    						    	    echo "Can't Connect to network. Please check your network connection.";
+                    						    	    exit;
+                    						    	}
+                    						    	if (mysqli_num_rows($result) != 0){
+                    						    	    while($row=mysqli_fetch_assoc($result)){
+	                										echo "<option value='$row[ac_id]'>$row[ac_number]</option>";
+                    						    	    }
+                    						    	} 
+
+													mysqli_close($conn);
+                    							?>
+												</select>
+												<!-- <a href="#"></a> -->
 											</div>
 											<br><br>
+										
 											<div>
 												<div class="input-group">
 													<label for="from">From</label>
-													<input type="text" class="form-control" placeholder="Origin" name="" id="from"
-														required>
+													<select class="form-control" placeholder="Origin" name="from"	required>
+														<?php
+
+															$conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+															if(!$conn){
+																exit;
+															}
+															$sql="SELECT id,ap_name from airports";
+
+															$result = mysqli_query($conn,$sql);
+															if(!$result){
+																exit;
+															}
+															while($row=mysqli_fetch_assoc($result)){
+																echo "<option value='$row[id]'>$row[ap_name]</option>";
+															}
+
+															mysqli_close($conn);
+														?>
+													</select>
 												</div>
 												<div class="input-group">
 													<label for="to">To</label>
-													<input type="text" class="form-control" placeholder="Destination" name="" id="to"
-														required>
+													<select class="form-control" placeholder="Destination" name="to"	required>
+														<?php
+
+															$conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+															if(!$conn){
+																exit;
+															}
+															$sql="SELECT id,ap_name from airports";
+
+															$result = mysqli_query($conn,$sql);
+															if(!$result){
+																exit;
+															}
+															while($row=mysqli_fetch_assoc($result)){
+																echo "<option value='$row[id]'>$row[ap_name]</option>";
+															}
+
+															mysqli_close($conn);
+														?>
+													</select>
 												</div>
 											</div>
 											<br>
 											<div>
 												<div class="input-group">
-													<label for="Departure">Departure Date</label>
-													<input type="date" class="form-control" name="date1" min="2017-01-01" id="Departure"
-														required>
+													<label for="Departure">Departure Date</label><br>
+													<input type="date" class="form-control" name="depart_date" id="Departure" unselectable="on" onselectstart="return false;" onmousedown="return false;" autocomplete="false" required>
 												</div>
 												<div class="input-group">
 													<label>Departure Time</label>
-													<input type="time" class="form-control" name="" id="">
+													<input type="time" class="form-control" name="depart_time" unselectable="on" onselectstart="return false;" onmousedown="return false;" autocomplete="false" id="">
 												</div>
 											</div>
 											<br>
@@ -217,10 +270,6 @@
 												<div class="input-group">
 													<label for="Adults">Journey Hours</label>
 													<input type="number" class="form-control" id="" value="1" name="" min="1" required>
-												</div>
-												<div class="input-group">
-													<label>Intervals</label>
-													<input type="number" class="form-control" id="" value="0" name="" min="0">
 												</div>
 											</div>
 											<!--class tabs-->
@@ -347,7 +396,7 @@
     </div>
 
     <?php include("Includes/footer.php"); ?>
-
+	
 </body>
 
 </html>
