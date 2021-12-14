@@ -110,7 +110,7 @@
                 else{
                 ?>
                 <tr>
-                    <td>No flights are scheduled on this route</td>
+                    <td>No flights are scheduled on this route.</td>
                 </tr>
                 <?php
                 }
