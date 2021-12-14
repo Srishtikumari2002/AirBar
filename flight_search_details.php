@@ -88,17 +88,22 @@
                     echo "";
                     exit;
                 }
-
+                $id = 0 ;
                 if (mysqli_num_rows($result) != 0){
                     while($row=mysqli_fetch_assoc($result)){
+                        $id++;
                         echo "<tr>";
-                        echo "<td>#</td>";
+                        echo "<td>$id</td>";
                         echo "<td>$row[Flight_Name]</td>";
                         echo "<td>$row[Departure]</td>";
                         echo "<td>$row[Arrival]</td>";
                         echo "<td>$row[Duration]</td>";
                         echo "<td>$row[Price]</td>";
-                        echo "<td><label for='flight_select' class='radio'><input type='radio' name='flight_select' id='$row[Flight_Name]' class='radio__input'><div class='radio__radio'></div></label></td>";
+                        if ($id==1){
+                        echo "<td><label for='flight_select' class='radio'><input type='radio' checked name='flight_select' id='$row[Flight_Name]' class='radio__input'><div class='radio__radio'></div></label></td>";
+                        }
+                        else{echo "<td><label for='flight_select' class='radio'><input type='radio' name='flight_select' id='$row[Flight_Name]' class='radio__input'><div class='radio__radio'></div></label></td>";
+                        }
                         echo "</tr>";
                     }
                 }
@@ -112,8 +117,9 @@
                 mysqli_close($conn);    
             ?>
         </tbody>
-
+        
     </table>
+    <button type="button">Continue</button>
 
     <main style="height:50vh;"></main>
 

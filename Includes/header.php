@@ -41,18 +41,6 @@
                 <a href="index.php" class="logo"> AirBar <img src="Images/logo.png" alt="" width="44" height="40" /></a>
                 <ul class="nav-list">
                     <li>
-                        <a href="#" class="nav-link">Manage</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">Offers</a>
-                    </li>
-                    <li>
-                        <a href="contact.php" class="nav-link">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link">FAQs</a>
-                    </li>
-                    <li>
                         <div class="search-box">
                             <button class="btn-search"><i class="fas fa-search"></i></button>
                             <input type="text" class="input-search" placeholder="Search...">
@@ -68,7 +56,7 @@
                 <?php }?>
                 
                 <a class="nav-link" <?php echo (isset($_SESSION['email']) && !empty($_SESSION['email'])) ? '':'style="display:none;"'?>>Hi <?php echo $_SESSION['name']?> !&nbsp;</a>
-                <a href="#" id="nav-cta">Book Now</a>
+                <a href="book_flight.php" id="nav-cta">Book Now</a>
                 <a href="dashboard.php" <?php echo (isset($_SESSION['email']) && !empty($_SESSION['email']) && ($_SESSION['level'] == 0)) ? '':'style="display:none;"'?>>&nbsp;<i class="fas fa-user-tie fa-2x"></i></a>
                 <a href="admin_dashboard.php" <?php echo (isset($_SESSION['email']) && !empty($_SESSION['email']) && ($_SESSION['level'] == 1)) ? '':'style="display:none;"'?>>&nbsp;<i class="fas fa-user-tie fa-2x"></i></a>
             </nav>
@@ -174,14 +162,10 @@
                     <li>
                         <span>My Account</span>
                     </li>
-                <?php  } else { ?>
-                    <li>
-                        <a >Login\Signup</a>
-                    </li>     
-                <?php }?>
+                <?php  }?>
 
                 <li>
-                    <span>Home</span>
+                    <span><a href="index.php">Home</a></span>
                 </li>
                 <li>
                     <span>Book a Flight</span>
@@ -202,7 +186,10 @@
                     <span>Offers</span>
                 </li>
                 <li>
-                    <span>FAQs</span>
+                    <span>Manage</span>
+                </li>
+                <li>
+                    <span><a href="faq.php">FAQs</a></span>
                 </li>
                 <li>
                     <span>Contact Us</span>

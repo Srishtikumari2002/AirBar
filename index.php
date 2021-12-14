@@ -13,7 +13,6 @@
     <title>Book Domestic & International Flights</title>
 
     <!-- css stylesheets -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="Css/index.css">
     <link rel="stylesheet" href="Css/card.css">
 
