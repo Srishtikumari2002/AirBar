@@ -20,6 +20,7 @@
     <link rel="icon" href="Images/favicon.png" type="image/png">
 
     <!-- javascript files -->
+    <script defer src="Js/header.js"></script>
 
 </head>
 
@@ -243,27 +244,55 @@
                     </tr>
                     <?php
                     }
-                    mysqli_close($conn);    
+                    mysqli_close($conn);  
+                    
+                    if (!empty($concession)){
+                        echo "<input id='concession' type='hidden' value='$concession'>$concession</input>";
+                    }
+                    echo "<input name='from' type='hidden' value='$from'>$from</input>";
+                    echo "<input name='to' type='hidden' value='$to'>$to</input>";
+                    echo "<input name='departure_date' type='hidden' value='$depart_date'>$depart_date</input>";
+                    echo "<input name='travel_class' type='hidden' value='$class'>$class</input>";
                 ?>
             </tbody>
                 
         </table>
 
-        <div class="select-flight">
-            <div class="select-flight-details">
-                <?php 
-                    if (isset($_SESSION['email']) && !empty($_SESSION['email'])){
-                        
-                        echo '<input id="book-flight" class="btn btn-primary" type="submit" value="Continue"></input>';
-                    }
-                    else {
+        <div style="position:fixed;bottom:0;margin: 0 auto;width: 100%;padding: 15px;border-top:3px solid grey;" class="accordion" id="flight_details">
+            <div class="accordion-item">
+                <div class="accordion-body">
+                    <div style="display:flex;justify-content:space-between;">
+                        <label>
+                            <?php 
+                                echo "$from &#8594; $to";
+                            ?>
+                        </label>
+                        <label>
+                            <?php
+                                echo "$depart_date";
+                            ?>
+                        </label>
+                        <?php 
+                            if (isset($_SESSION['email']) && !empty($_SESSION['email'])){
 
-                        echo '<label>Please Login First to Continue</label>';
-                } ?>
+                                echo '<input id="book-flight" class="btn btn-primary" type="submit" value="Continue"></input>';
+                            }
+                            else {
+                            
+                                echo '<a id="log_warn_btn" onclick="show_log_warn()" class="btn btn-primary">Login</a>';
+                            } 
+                        ?>
+
+                    </div>
+                </div>
             </div>
         </div>
     </form>
-
+<script>
+    function show_log_warn(){
+    modal.style.display = "block";
+    show_login();}
+</script>
 </body>
 
 </html>

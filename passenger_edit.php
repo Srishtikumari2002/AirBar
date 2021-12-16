@@ -30,6 +30,7 @@
         include("Includes/header.php");
         include("Background/mysql_details.php");
         $flight_id = $_POST['flight_select'];
+        $class = $_POST['travel_class'];
     ?>
 
     <div style="background: #004aad;height: 6.6rem;margin-bottom:25px;"></div>
@@ -39,8 +40,32 @@
         <div style="margin-bottom:50px;" class="accordion" id="flight_details">
             <div class="accordion-item">
                 <div class="accordion-body">
-                    <div style="display:flex;justify-content:flex-end;" class="row">
-                        <button style="width:20%;" id="seat-select-btn" type="submit" class="btn btn-primary"><a style="color: white">Modify</a></button>
+                    <div style="display:flex;justify-content:space-between;">
+                        <label>
+                            <?php 
+                                echo "$_POST[from] &#8594; $_POST[to]";
+                            ?>
+                        </label>
+                        <label>
+                            <?php 
+                                $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+                                if(!$conn){
+                                    exit;
+                                }
+                                $sql="SELECT * from Flight_schedule where fl_id=$flight_id";
+                            
+                                $result = mysqli_query($conn,$sql);
+                                if(!$result){
+                                    exit;
+                                }
+                        
+                                while($row=mysqli_fetch_assoc($result)){
+                                    echo "$row[depart] &nbsp; $row[depart_time]";
+                                }
+                                mysqli_close($conn);
+                            ?>
+                        </label>
+                        <button style="width:20%;" id="seat-select-btn" type="button" onclick="history.back()" class="btn btn-primary"><a style="color: white">Modify</a></button>
                     </div>
                 </div>
             </div>
@@ -73,6 +98,43 @@
                                 </div>
                             </div>
                             <br>
+                            <?php
+                                $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+                                if(!$conn){
+                                    exit;
+                                }
+                                $sql="select *
+                                from Flight_schedule as FS
+                                JOIN airfare as AF on FS.total_fare = AF.af_id
+                                where FS.fl_id = $flight_id";
+        
+                                $result = mysqli_query($conn,$sql);
+                                if(!$result){
+                                    exit;
+                                }
+                                $airfare = 0;
+                                while($row=mysqli_fetch_assoc($result)){
+                                    if($class == 'Economy'){
+                                        $airfare = $row['economy_fare'];
+                                    }
+                                    else if($class == 'Business'){
+                                        $airfare = $row['business_fare'];
+                                    }
+                                    else if ($class == 'First'){
+                                        $airfare = $row['first_fare'];
+                                    }
+                                }
+        
+                                mysqli_close($conn);  
+
+                                $nop = 1;
+                                $discount = 0;
+                                $airfare = $airfare * $nop;
+                                $total_bill = $airfare+655+300-$discount;
+                                echo "<input name='total_bill' type='hidden' value='$total_bill'>$total_bill</input>";
+                                echo "<input name='airfare' type='hidden' value='$airfare'>$airfare</input>";
+                                echo "<input name='discount' type='hidden' value='$discount'>$discount</input>";
+                            ?>
                             <div style="display:flex;justify-content:space-between;" class="row">
                                     <button style="width:25%;" type="button" id="add_passenger_btn" class="btn btn-primary"><a style="color: white"><i class="fa fa-plus"></i> Add Passenger</a></button>
                                     <button style="width:25%;" id="seat-select-btn" type="submit" class="btn btn-primary"><a style="color: white">Continue to Payment</a></button>

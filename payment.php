@@ -13,6 +13,8 @@
     <title>Confirm Payment</title>
 
     <!-- css stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/dashboard.css">
 
     <!-- favicon -->
     <link rel="icon" href="Images/favicon.png" type="image/png">
@@ -30,9 +32,9 @@
         require_once("PaytmKit/encdec_paytm.php");
 
         $orderId 	= time();
-        $txnAmount 	= "100.50";
+        $txnAmount 	= $_POST['total_bill'];
         $custId 	= $_SESSION['id'];
-        $mobileNo 	= '';
+        $mobileNo 	= '7777777777';
         $email 		= $_SESSION['email'];
     
         $paytmParams = array();
@@ -50,16 +52,84 @@
         $transactionURL = PAYTM_TXN_URL;
     ?>
 
-    <div style="background: #004aad;height: 6.6rem;"></div>
-
     <form method="POST" action='<?php echo $transactionURL; ?>'>
+        <div class="profile-container">
+
+            <div class="profile-content">
+
+                <div class="profile-left-side">
+
+                    <div class="profile-topic-text">Payee Details</div><br>
+                    <div class="profile-topic-text"><i class="fas fa-user-tie fa-7x"></i></div>
+
+                </div>
+
+                <div class="profile-right-side">
+
+                    <form action="#" method="POST">
+
+                        <div class="profile-input-box">
+                            <input id="profile-name" type="text" disabled  placeholder="Enter your name" value="<?php echo $_SESSION['name']; ?>">
+                        </div>
+
+                        <div class="profile-input-box">
+                            <input id="profile-email" type="email"  disabled placeholder="Enter your email" value="<?php echo $_SESSION['email']; ?>">
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="profile-container">
+
+            <div class="profile-content">
+
+                <div class="profile-left-side">
+
+                    <div class="profile-topic-text">Payment Summary</div><br>
+                    <div class="profile-topic-text"><i class="fas fa-clipboard-check fa-7x"></i></div>
+
+                </div>
+
+                <div class="profile-right-side">
+
+                    <div style="display:flex;justifycontent:space-between;" class="profile-input-box">
+                        <label style="width:50%;font-size:2rem;">Airfare Charges</label>
+                        <input disabled type="text" value="<?php $_POST['airfare']?> INR">
+                    </div>
+                    <div style="display:flex;justifycontent:space-between;" class="profile-input-box">
+                        <label style="width:50%;font-size:2rem;">Fees & Taxes</label>
+                        <input disabled type="text" value="655.0 INR">
+                    </div>
+                    <div style="display:flex;justifycontent:space-between;" class="profile-input-box">
+                        <label style="width:50%;font-size:2rem;">Convenience Fee</label>
+                        <input disabled type="text" value="300.0 INR">
+                    </div>
+                    <div style="display:flex;justifycontent:space-between;" class="profile-input-box">
+                        <label style="width:50%;font-size:2rem;">Discount</label>
+                        <input disabled type="text" value="- <?php $_POST['discount']?> INR">
+                    </div>
+                    <div style="display:flex;justifycontent:space-between;" class="profile-input-box">
+                        <label style="width:50%;font-size:3rem;">Total Bill</label>
+                        <input disabled type="text" value="<?php $_POST['total_bill']?> INR">
+                    </div>
+                    <div class="profile-button">
+                        <input  type="submit" name="submit" value="Pay Now">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
         <?php
             foreach($paytmParams as $name => $value) {
                 echo '<input type="hidden" name="' . $name .'" value="' . $value . '">';
             }
         ?>
         <input type="hidden"  name="CHECKSUMHASH" value="<?php echo $paytmChecksum ?>">
-        <input type="submit" name="submit" value="Pay Now" />
+
     </form>
 
 </body>

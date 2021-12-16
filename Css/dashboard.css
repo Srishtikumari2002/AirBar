@@ -95,7 +95,7 @@ body {
   display: inline-block;
   margin-top: 12px;
 }
-.profile-right-side .profile-button input[type="button"]{
+.profile-right-side .profile-button input[type="button"], .profile-right-side .profile-button input[type="submit"] {
   color: #fff;
   font-size: 18px;
   outline: none;
@@ -107,7 +107,7 @@ body {
   transition: all 0.3s ease;
   margin-top: 2rem;
 }
-.profile-button input[type="button"]:hover{
+.profile-button input[type="button"]:hover, .profile-button input[type="submit"]:hover{
   background: #5029bc;
 }
 
