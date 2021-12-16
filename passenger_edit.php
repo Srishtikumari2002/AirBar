@@ -31,7 +31,8 @@
         include("Background/mysql_details.php");
         $flight_id = $_POST['flight_select'];
         $class = $_POST['travel_class'];
-        $_SESSION['fl_id'] = $flight_id;
+        setcookie('id',$_SESSION['id']);
+        setcookie('fl_id',$flight_id);
     ?>
 
     <div style="background: #004aad;height: 6.6rem;margin-bottom:25px;"></div>
@@ -136,7 +137,6 @@
                                 echo "<input name='total_bill1' type='hidden' value=$total_bill></input>";
                                 echo "<input name='airfare1' type='hidden' value=$airfare></input>";
                                 echo "<input name='discount1' type='hidden' value=$discount></input>";
-                                echo "<input name='fl_id' type='hidden' value=$flight_id></input>";
                             ?>
                             <div style="display:flex;justify-content:space-between;" class="row">
                                     <button style="width:25%;" type="button" id="add_passenger_btn" class="btn btn-primary"><a style="color: white"><i class="fa fa-plus"></i> Add Passenger</a></button>
