@@ -36,10 +36,12 @@
         $custId 	= $_SESSION['id'];
         $mobileNo 	= '7777777777';
         $email 		= $_SESSION['email'];
+        $fl_id = $_POST['fl_id'];
     
         $paytmParams = array();
         $paytmParams["ORDER_ID"] 	= $orderId;
         $paytmParams["CUST_ID"] 	= $custId;
+        $paytmParams["FL_ID"]   	= $fl_id;
         $paytmParams["MOBILE_NO"] 	= $mobileNo;
         $paytmParams["EMAIL"] 		= $email;
         $paytmParams["TXN_AMOUNT"] 	= $txnAmount;

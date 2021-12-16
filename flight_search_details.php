@@ -179,7 +179,7 @@
                     $return_date = $_POST["arrival"];
                     $class = $_POST["travel-class"];
                     $currency = $_POST["currency"];
-                    $concession = $_POST['concession'];
+                    // $concession = $_POST['concession'];
 
                     if($class='First'){$class_fare = 'AF.first_fare';}
                     else if($class='Business'){$class_fare = 'AF.business_fare';}

@@ -1,11 +1,12 @@
 <?php
-header("Pragma: no-cache");
-header("Cache-Control: no-cache");
-header("Expires: 0");
+session_start();
+$_SESSION['id'] = 1;
+$_SESSION['fl_id'] = 16;
 
 // following files need to be included
 require_once("PaytmKit/config_paytm.php");
 require_once("PaytmKit/encdec_paytm.php");
+include('Background/mysql_details.php');
 
 $paytmChecksum = "";
 $paramList = array();
@@ -19,23 +20,33 @@ $isValidChecksum = verifychecksum_e($paramList, PAYTM_MERCHANT_KEY, $paytmChecks
 
 
 if($isValidChecksum == "TRUE") {
-	echo "<pre>";
-	print_r($_POST);
+	// echo "<pre>";
+	// print_r($_POST);
 
 	if ($_POST["STATUS"] == "TXN_SUCCESS") {
 		echo "<b>Transaction status is success</b>" . "<br/>";
-		//Process your transaction here as success transaction.
-		//Verify amount & order id received from Payment gateway with your application's order id and amount.
+		if (isset($_POST) && count($_POST)>0 )
+		{ 
+			foreach($_POST as $paramName => $paramValue) {
+					echo "<br/>" . $paramName . " = " . $paramValue;
+			}
+			include('Background/mysql_details.php');
+			$conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+            if(!$conn){
+                exit;
+            }
+            $sql="INSERT INTO Transactions (booking_date,passenger,flight_no,type,charges,discount,total) Values (date('Y-m-d'),'$_SESSION[id]','$_SESSION[fl_id]',1,1,1,'$_POST[TXNAMOUNT]')";
+            $result = mysqli_query($conn,$sql);
+            if(!$result){
+                exit;
+            }
+            
+            mysqli_close($conn);
+			header("Refresh:0; url=feedback.php");
+		}
 	}
 	else {
 		echo "<b>Transaction status is failure</b>" . "<br/>";
-	}
-
-	if (isset($_POST) && count($_POST)>0 )
-	{ 
-		foreach($_POST as $paramName => $paramValue) {
-				echo "<br/>" . $paramName . " = " . $paramValue;
-		}
 	}
 	
 

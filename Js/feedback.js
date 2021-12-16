@@ -19,5 +19,5 @@ sendBtn.addEventListener("click", () => {
 		<p>We'll use your feedback to improve our customer support performance.</p>
 		<button class="btn">Done</button>
 	`;
-  setTimeout(location.href('index.php'),5000);
+  setTimeout(location.href('index.php'),50);
 });
