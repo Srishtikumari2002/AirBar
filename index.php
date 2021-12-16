@@ -190,12 +190,12 @@
 
         <div class="radios">
             <label for="student" class="radio">
-                <input type="radio" required name="concession" id="student" class="radio__input">
+                <input type="radio" name="concession" id="student" class="radio__input">
                 <div class="radio__radio"></div>
                 Students
             </label>
             <label for="forces" class="radio">
-                <input type="radio" required name="concession" id="forces" class="radio__input">
+                <input type="radio" name="concession" id="forces" class="radio__input">
                 <div class="radio__radio"></div>
                 Armed Forces
             </label>
@@ -203,7 +203,7 @@
 
         <div class="left">
             <label for="docs" class="radio">
-                <input type="radio" required name="concession" id="docs" class="radio__input">
+                <input type="radio" name="concession" id="docs" class="radio__input">
                 <div class="radio__radio"></div>
                 Doctors & Nurses
             </label>

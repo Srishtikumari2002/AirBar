@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+<?php include('Includes/loading.php'); ?>
 
 <head>
     <meta charset="UTF-8">
@@ -26,8 +28,6 @@
 </head>
 
 <body>
-    
-    <div id="loader"></div>
 
     <?php session_start();?>
     <!-- top navigation bar  -->
@@ -192,7 +192,7 @@
                     <span><a href="faq.php">FAQs</a></span>
                 </li>
                 <li>
-                    <span>Contact Us</span>
+                    <span><a href="contact.php">Contact Us</a></span>
                 </li>
                 <li>
                     <a id="admin-reg-btn">Admin Registration</a>

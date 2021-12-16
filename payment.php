@@ -13,79 +13,55 @@
     <title>Confirm Payment</title>
 
     <!-- css stylesheets -->
-    <link rel="stylesheet" href="Css/payment.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- favicon -->
     <link rel="icon" href="Images/favicon.png" type="image/png">
 
     <!-- javascript files -->
-    <!-- <script defer src=""></script> -->
 
 </head>
 
 <body>
-    <div class="container">
-        <h1>Confirm Your Payment</h1>
-        <div class="first-row">
-            <div class="owner">
-                <h3>Owner</h3>
-                <div class="input-field">
-                    <input type="text">
-                </div>
-            </div>
-            <div class="cvv">
-                <h3>CVV</h3>
-                <div class="input-field">
-                    <input type="password">
-                </div>
-            </div>
-        </div>
-        <div class="second-row">
-            <div class="card-number">
-                <h3>Card Number</h3>
-                <div class="input-field">
-                    <input type="number">
-                </div>
-            </div>
-        </div>
-        <div class="third-row">
-            <h3>Card Number</h3>
-            <div class="selection">
-                <div class="date">
-                    <select name="months" id="months">
-                        <option value="Jan">Jan</option>
-                        <option value="Feb">Feb</option>
-                        <option value="Mar">Mar</option>
-                        <option value="Apr">Apr</option>
-                        <option value="May">May</option>
-                        <option value="Jun">Jun</option>
-                        <option value="Jul">Jul</option>
-                        <option value="Aug">Aug</option>
-                        <option value="Sep">Sep</option>
-                        <option value="Oct">Oct</option>
-                        <option value="Nov">Nov</option>
-                        <option value="Dec">Dec</option>
-                    </select>
-                    <select name="years" id="years">
-                        <option value="2020">2020</option>
-                        <option value="2019">2019</option>
-                        <option value="2018">2018</option>
-                        <option value="2017">2017</option>
-                        <option value="2016">2016</option>
-                        <option value="2015">2015</option>
-                    </select>
-                </div>
-                <div class="cards">
-                    <img src="Images/mc.png" alt="">
-                    <img src="Images/visa.png" alt="">
-                    <img src="Images/pp.png" alt="">
-                </div>
-            </div>
-        </div>
-        <a href="">Confirm</a>
-    </div>
+
+    <?php 
+        include("Includes/header.php");
+        include("Background/mysql_details.php");
+        require_once("PaytmKit/config_paytm.php");
+        require_once("PaytmKit/encdec_paytm.php");
+
+        $orderId 	= time();
+        $txnAmount 	= "100.50";
+        $custId 	= $_SESSION['id'];
+        $mobileNo 	= '';
+        $email 		= $_SESSION['email'];
+    
+        $paytmParams = array();
+        $paytmParams["ORDER_ID"] 	= $orderId;
+        $paytmParams["CUST_ID"] 	= $custId;
+        $paytmParams["MOBILE_NO"] 	= $mobileNo;
+        $paytmParams["EMAIL"] 		= $email;
+        $paytmParams["TXN_AMOUNT"] 	= $txnAmount;
+        $paytmParams["MID"] 		= PAYTM_MERCHANT_MID;
+        $paytmParams["CHANNEL_ID"] 	= PAYTM_CHANNEL_ID;
+        $paytmParams["WEBSITE"] 	= PAYTM_MERCHANT_WEBSITE;
+        $paytmParams["INDUSTRY_TYPE_ID"] = PAYTM_INDUSTRY_TYPE_ID;
+        $paytmParams["CALLBACK_URL"] = PAYTM_CALLBACK_URL;
+        $paytmChecksum = getChecksumFromArray($paytmParams, PAYTM_MERCHANT_KEY);
+        $transactionURL = PAYTM_TXN_URL;
+    ?>
+
+    <div style="background: #004aad;height: 6.6rem;"></div>
+
+    <form method="POST" action='<?php echo $transactionURL; ?>'>
+        <?php
+            foreach($paytmParams as $name => $value) {
+                echo '<input type="hidden" name="' . $name .'" value="' . $value . '">';
+            }
+        ?>
+        <input type="hidden"  name="CHECKSUMHASH" value="<?php echo $paytmChecksum ?>">
+        <input type="submit" name="submit" value="Pay Now" />
+    </form>
+
 </body>
 
 </html>

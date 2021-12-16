@@ -1,0 +1,13 @@
+*,*::before,*::after {
+    font-size: 20px;
+}
+
+body{
+    background: #004aade1;
+}
+
+.booking_form {
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+}
