@@ -1,6 +1,4 @@
 <?php
-$user_id = $_COOKIE['id'];
-$fl_id = $_COOKIE['fl_id'];
 // following files need to be included
 require_once("PaytmKit/config_paytm.php");
 require_once("PaytmKit/encdec_paytm.php");
@@ -28,17 +26,16 @@ if($isValidChecksum == "TRUE") {
 			foreach($_POST as $paramName => $paramValue) {
 					echo "<br/>" . $paramName . " = " . $paramValue;
 			}
-			include('Background/mysql_details.php');
-			$conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
-            if(!$conn){
-                exit;
-            }
-            $sql="INSERT INTO Transactions (booking_date,passenger,flight_no,type,charges,discount,total) Values (date('Y-m-d'),'$user_id','$fl_id',1,1,1,'$_POST[TXNAMOUNT]')";
-            $result = mysqli_query($conn,$sql);
-            if(!$result){
-				echo "<b>Transaction status is failure</b>" . "<br/>";
-                exit;
-            }
+			// $conn=mysqli_connect($db_hostname,$db_username,$db_password,$db_name);
+            // if(!$conn){
+            //     exit;
+            // }
+            // $sql="INSERT INTO Transactions (booking_date,passenger,flight_no,type,charges,discount,total) Values (date('Y-m-d'),'$_SESSION[id]','$_SESSION[fl_id]',1,1,1,'$_POST[TXNAMOUNT]')";
+            // $result = mysqli_query($conn,$sql);
+            // if(!$result){
+			// 	echo "<b>Transaction status is failure</b>" . "<br/>";
+            //     exit;
+            // }
             echo "<b>Transaction status is success</b>" . "<br/>";
             mysqli_close($conn);
 			header("Refresh:0; url=feedback.php");

@@ -31,8 +31,7 @@
         include("Background/mysql_details.php");
         $flight_id = $_POST['flight_select'];
         $class = $_POST['travel_class'];
-        setcookie('id',$_SESSION['id']);
-        setcookie('fl_id',$flight_id);
+        $_SESSION['fl_id'] = $flight_id;
     ?>
 
     <div style="background: #004aad;height: 6.6rem;margin-bottom:25px;"></div>

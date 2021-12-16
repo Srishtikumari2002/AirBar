@@ -216,14 +216,30 @@
     </form>
 
     <!-- offers  -->
-    <div style="margin: 0 auto;width: 80%;">
+    <div style="margin: 10px auto;width: 80%;">
         <br><br>
-        <h1 style="margin: 0 auto;font-size: 4rem;color:#222222;">&nbsp; Offers</h1>
+        <h1 style="margin: 18px auto;font-size: 4rem;color:#222222;">&nbsp; Offers</h1>
     
         <div class="card">
 
             <div class="image">
-               <img src="Images/Vaxi_Fare_offer.png" width='307' height='200'>
+               <img src="Images/Vaxi_Fare_offer.png" width='350' height='200'>
+            </div>
+            <div class="title">
+                <h1>
+                    Vaxi Fare
+                </h1>
+            </div>
+            <div class="des">
+                <p>up to 20% off for all our vaccinated fliers.</p>
+                <button>Know More</button>
+            </div>
+
+        </div>
+        <div class="card">
+
+            <div class="image">
+               <img src="Images/Vaxi_Fare_offer.png" width='350' height='200'>
             </div>
             <div class="title">
                 <h1>
@@ -253,9 +269,96 @@
             </div>
 
         </div>
+        <div class="card">
+
+            <div class="image">
+               <img src="Images/student_offer.png" width='307' height='200'>
+            </div>
+            <div class="title">
+                <h1>
+                    Student Special
+                </h1>
+            </div>
+            <div class="des">
+                <p>up to 15% off for all student fliers above 12.</p>
+                <button>Know More</button>
+            </div>
+        </div>
+            
+    </div>
+    <div style="margin: 10px auto;width: 80%;">
+        <br><br>
+        <h1 style="margin: 18px auto;font-size: 4rem;color:#222222;">&nbsp; Discover More</h1>
+    
+        <div class="card">
+
+            <div class="image">
+               <img src="Images/Vaxi_Fare_offer.png" width='350' height='200'>
+            </div>
+            <div class="title">
+                <h1>
+                    Vaxi Fare
+                </h1>
+            </div>
+            <div class="des">
+                <p>up to 20% off for all our vaccinated fliers.</p>
+                <button>Know More</button>
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="image">
+               <img src="Images/Vaxi_Fare_offer.png" width='350' height='200'>
+            </div>
+            <div class="title">
+                <h1>
+                    Vaxi Fare
+                </h1>
+            </div>
+            <div class="des">
+                <p>up to 20% off for all our vaccinated fliers.</p>
+                <button>Know More</button>
+            </div>
+
+        </div>
+                        
+        <div class="card">
+
+            <div class="image">
+               <img src="Images/student_offer.png" width='307' height='200'>
+            </div>
+            <div class="title">
+                <h1>
+                    Student Special
+                </h1>
+            </div>
+            <div class="des">
+                <p>up to 15% off for all student fliers above 12.</p>
+                <button>Know More</button>
+            </div>
+
+        </div>
+        <div class="card">
+
+            <div class="image">
+               <img src="Images/student_offer.png" width='307' height='200'>
+            </div>
+            <div class="title">
+                <h1>
+                    Student Special
+                </h1>
+            </div>
+            <div class="des">
+                <p>up to 15% off for all student fliers above 12.</p>
+                <button>Know More</button>
+            </div>
+        </div>
+            
     </div>
 
-    <main style="height:50vh;"></main>
+    <!-- <main style="height:50vh;"></main> -->
     <?php include("Includes/footer.php"); ?>
 
 </body>
