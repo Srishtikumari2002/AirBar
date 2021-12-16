@@ -20,7 +20,7 @@
         <div class="content">
             <div class="left box">
                 <div class="upper">
-                    <div class="topic">About us</div>
+                    <div class="topic"><a href="about_us.php">About us</a></div>
                       <p>AiBar is the best airline service. We am to provide our users with a fast, secure and simple airline management system.</p>
                 </div>
                 <div class="lower">
@@ -35,15 +35,12 @@
             </div>
             <div class="middle box">
                 <div class="topic">Our Services</div>
-                <div><a href="#">Web Design, Development</a></div>
-                <div><a href="#">Web UX Design, Reasearch</a></div>
-                <div><a href="#">Web User Interface Design</a></div>
-                <div><a href="#">Theme Development, Design</a></div>
-                <div><a href="#">Mobile Application Design</a></div>
-                <div><a href="#">Wire raming & Prototyping</a></div>
+                <div><a href="#">Flight Booking</a></div>
+                <div><a href="#">Flight Search</a></div>
+                <div><a href="#">Booking Management</a></div>
             </div>
             <div class="right box">
-                <div class="topic">Subscribe us</div>
+                <div class="topic">Contact us</div>
                   <form action="#">
                       <input type="text" placeholder="Enter email address">
                       <input type="submit" name="" value="Send">

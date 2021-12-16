@@ -106,7 +106,7 @@
                                 $sql="select *
                                 from Flight_schedule as FS
                                 JOIN airfare as AF on FS.total_fare = AF.af_id
-                                where FS.fl_id = $flight_id";
+                                where FS.fl_id = '$flight_id'";
         
                                 $result = mysqli_query($conn,$sql);
                                 if(!$result){
@@ -126,14 +126,15 @@
                                 }
         
                                 mysqli_close($conn);  
-
-                                $nop = 1;
+                                
+                                $airfare = (int)$airfare;
+                                $nop =1;
                                 $discount = 0;
                                 $airfare = $airfare * $nop;
                                 $total_bill = $airfare+655+300-$discount;
-                                echo "<input name='total_bill' type='hidden' value='$total_bill'>$total_bill</input>";
-                                echo "<input name='airfare' type='hidden' value='$airfare'>$airfare</input>";
-                                echo "<input name='discount' type='hidden' value='$discount'>$discount</input>";
+                                echo "<input name='total_bill1' type='hidden' value=$total_bill></input>";
+                                echo "<input name='airfare1' type='hidden' value=$airfare></input>";
+                                echo "<input name='discount1' type='hidden' value=$discount></input>";
                             ?>
                             <div style="display:flex;justify-content:space-between;" class="row">
                                     <button style="width:25%;" type="button" id="add_passenger_btn" class="btn btn-primary"><a style="color: white"><i class="fa fa-plus"></i> Add Passenger</a></button>

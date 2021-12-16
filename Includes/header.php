@@ -168,6 +168,9 @@
                     <span><a href="index.php">Home</a></span>
                 </li>
                 <li>
+                    <span><a href="about_us.php">About us</a></span>
+                </li>
+                <li>
                     <span>Book a Flight</span>
                 </li>
                 <li>

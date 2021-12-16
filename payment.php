@@ -32,7 +32,7 @@
         require_once("PaytmKit/encdec_paytm.php");
 
         $orderId 	= time();
-        $txnAmount 	= $_POST['total_bill'];
+        $txnAmount 	= $_POST['total_bill1'];
         $custId 	= $_SESSION['id'];
         $mobileNo 	= '7777777777';
         $email 		= $_SESSION['email'];
@@ -66,8 +66,6 @@
 
                 <div class="profile-right-side">
 
-                    <form action="#" method="POST">
-
                         <div class="profile-input-box">
                             <input id="profile-name" type="text" disabled  placeholder="Enter your name" value="<?php echo $_SESSION['name']; ?>">
                         </div>
@@ -75,7 +73,6 @@
                         <div class="profile-input-box">
                             <input id="profile-email" type="email"  disabled placeholder="Enter your email" value="<?php echo $_SESSION['email']; ?>">
                         </div>
-                    </form>
 
                 </div>
 
@@ -97,7 +94,7 @@
 
                     <div style="display:flex;justifycontent:space-between;" class="profile-input-box">
                         <label style="width:50%;font-size:2rem;">Airfare Charges</label>
-                        <input disabled type="text" value="<?php $_POST['airfare']?> INR">
+                        <input disabled type="text" value="<?php echo $_POST['airfare1'];?> INR">
                     </div>
                     <div style="display:flex;justifycontent:space-between;" class="profile-input-box">
                         <label style="width:50%;font-size:2rem;">Fees & Taxes</label>
@@ -109,14 +106,14 @@
                     </div>
                     <div style="display:flex;justifycontent:space-between;" class="profile-input-box">
                         <label style="width:50%;font-size:2rem;">Discount</label>
-                        <input disabled type="text" value="- <?php $_POST['discount']?> INR">
+                        <input disabled type="text" value="<?php echo $_POST['discount1'];?> INR">
                     </div>
                     <div style="display:flex;justifycontent:space-between;" class="profile-input-box">
                         <label style="width:50%;font-size:3rem;">Total Bill</label>
-                        <input disabled type="text" value="<?php $_POST['total_bill']?> INR">
+                        <input disabled type="text" value="<?php echo $_POST['total_bill1'];?> INR">
                     </div>
                     <div class="profile-button">
-                        <input  type="submit" name="submit" value="Pay Now">
+                        <input type="submit" name="submit" value="Pay Now">
                     </div>
 
                 </div>

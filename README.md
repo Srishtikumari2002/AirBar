@@ -23,9 +23,10 @@ Visit the website here [https://airbar.herokuapp.com](https://airbar.herokuapp.c
   * Vs code
   * Git
   * GitHub
+  * Heroku
 
 ## Contributors 🎉️
 
 * Srishti Kumari
-* Simran
 * Simran Singh
+* Simran
