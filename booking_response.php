@@ -37,7 +37,7 @@ if($isValidChecksum == "TRUE") {
             //     exit;
             // }
             echo "<b>Transaction status is success</b>" . "<br/>";
-            mysqli_close($conn);
+            // mysqli_close($conn);
 			header("Refresh:0; url=feedback.php");
 		}
 	}
